@@ -1,0 +1,14 @@
+{% extends "_base/base_of_landing_page.html" %}
+
+{% load i18n %}
+
+{% block title %}{% trans "Logged out!" %} - {{ block.super }}{% endblock title %}
+
+{% block h1 %}{% trans "Logged out!" %}{% endblock h1 %}
+
+{% block content %}
+	<p>{% trans "Logged out!" %}</p>
+	<a href="{% url 'login'%}">{% trans "Click here to login again." %}</a>
+{% endblock %}
+
+{% block landing_footer %}{% endblock landing_footer %}

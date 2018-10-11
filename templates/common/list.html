@@ -1,0 +1,108 @@
+{% extends "_base/base.html" %}
+
+{% load i18n %}
+{% load model_property from labels_and_fields %}
+
+{% block content %}
+
+	{% include 'common/if_messages.html' %}
+	{% include 'transaction/filter_form.html' %}
+
+	<div class="table-full-width table-responsive{% if transaction %} transaction_list_table{% endif %}">
+		{% if object_list %}
+			<table class="table table-hover table-striped{% if transaction or import_from_file %} table-bordered{% endif %}">
+				<thead>
+					<tr>
+						<th>{% trans "Actions" %}</th>
+						{% for label in labels %}
+							<th>{{ label }}</th>
+						{% endfor %}
+					</tr>
+				</thead>
+				<tbody>
+					{% for element in object_list %}
+						<tr>
+							<td>
+								<small class="text-muted">
+									{% if import_from_file %}
+										{% if not element.success and element.no_error is not False %}
+											<a href="{{ element.get_check_url }}">{% trans "Check File (and import...)" %}</a>
+										{% endif %}
+									{% elif report %}
+										<a href="{{ element.get_read_url }}">{% trans "View report" %}</a>
+									{% else %}
+										{% if transaction and element.get_make_copy_url %}
+											<a href="{{ element.get_make_copy_url }}">{% trans "Copy" %}</a> |
+										{% endif %}
+										<a href="{{ element.get_update_url }}">{% trans "Edit" %}</a> |
+										<a href="{{ element.get_delete_url }}">{% trans "Delete" %}</a>
+									{% endif %}
+								</small>
+							</td>
+							{% for field_name in fields %}
+								
+								{% if field_name == 'transfer' %}
+									{% if field_name|model_property:element %}
+										<td class="text-center"><i class="fas fa-exchange-alt"></i></td>
+									{% elif 'value'|model_property:element > 0 %}
+										<td class="text-center"><i class="fas fa-plus text-success"></i></td>
+									{% elif 'value'|model_property:element < 0 %}
+										<td class="text-center"><i class="fas fa-minus text-danger"></i></td>
+									{% else %}
+										<td></td>
+									{% endif %}
+								{% elif field_name == 'currency' %}
+									<td title="{{ element.get_currency_title }}">{{ element.get_currency_title|slice:':3' }}</td>
+								{% elif field_name == 'tag' %}
+									<td>{% for tag in element.tag.all %}<div>{{ tag }}</div>{% endfor %}</td>
+								{% elif field_name == 'value' or field_name == 'value_in_curr' %}
+									{% if field_name|model_property:element == None %}
+										<td></td>
+									{% else %}
+										<td>{{ field_name|model_property:element }}</td>
+									{% endif %}
+								{% elif field_name == 'description' %}
+									<td>{{ field_name|model_property:element|linebreaksbr }}</td>
+
+								{# <ONLY-FOR-IMPORT_FROM_FILE> #}
+								{% elif field_name == 'num_imported_rows' %}
+									<td class="text-center">{{ field_name|model_property:element }}</td>
+								{% elif field_name == 'bank' %}
+									<td>{{ element.get_bank_name|default:'' }}</td>
+								{% elif field_name == 'variety' %}
+									<td>{{ element.get_variety_name }}</td>
+								{# </ONLY-FOR-IMPORT_FROM_FILE> #}
+
+								{# <ONLY-FOR-REPORT> #}
+								{% elif field_name == 'wallet' and report %}
+									<td>{% for wallet in element.wallet.all %}<div>{{ wallet }}</div>{% endfor %}</td>
+								{# </ONLY-FOR-REPORT> #}
+
+								{% elif field_name|model_property:element == True %}
+									<td class="text-center"><i class="fa fa-check text-success"></i></td>
+								{% elif field_name|model_property:element == False %}
+								  <td class="text-center"><i class="fa fa-times text-danger"></i></td>
+								{% else %}
+									<td class="wh-space-pre">{{ field_name|model_property:element|default:'' }}</td>
+								{% endif %}
+								
+							{% endfor %}
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		{% else %}
+			<p class="text-center text-warning">{{ msg_empty_object_list }}</p>
+		{% endif %}
+	</div>
+
+	{% if actions_description and object_list %}<p class="text-right">{{ actions_description }}</p>{% endif %}
+
+	{% if import_from_file and object_list %}
+		<p class="text-right">{% trans "* That indicator is relevant only for transactions." %}</p>
+	{% endif %}
+
+	{% include 'common/pagination.html' %}
+	{% include 'transaction/paginate_by_form.html' %}
+
+{% endblock content %}

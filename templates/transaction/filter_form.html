@@ -1,0 +1,85 @@
+{# TODO: add 'for' in the labels and 'id' in the fields #}
+{# TODO: add more filters and think about long vertical scrollbar #}
+
+{% if transaction and '/transaction/list_filter' in request.get_full_path %}
+
+	{% load i18n %}
+
+	<form class="card-body">
+
+		<input type="hidden" name="paginate_by" value="{{ paginate_by }}">
+
+		<div class="form-group row">
+			<label class="col-sm-2 col-form-label">{{ titles_of_labels.transfer }}</label>
+			<div class="col-sm-10">
+				<input name="transfer" type="radio" value="None"{% if transfer_filter is None %} checked{% endif %}> All
+        <input name="transfer" type="radio" value="True"{% if transfer_filter is True %} checked{% endif %}> Show only transfer transactions
+        <input name="transfer" type="radio" value="False"{% if transfer_filter is False and transfer_filter is not None %} checked{% endif %}> Exclude transfer transactions
+			</div>
+		</div>
+
+		<div class="form-group row">
+			<label class="col-sm-2 col-form-label">{{ titles_of_labels.wallet }}</label>
+			<div class="col-sm-10">
+				<select name="wallet" class="form-control">
+					<option value="">---------</option>
+					{% for w in wallet %}
+						<option value="{{ w.pk }}"{% if wallet_filter == w.pk %} selected{% endif %}>{{ w }}</option>
+					{% endfor %}
+				</select>
+			</div>
+		</div>
+
+		<div class="form-group row">
+			<label class="col-sm-2 col-form-label">{{ titles_of_labels.category }}</label>
+			<div class="col-sm-10">
+				<select name="category" class="form-control">
+					<option value="">---------</option>
+					{% for cat in category %}
+						<option value="{{ cat.pk }}"{% if category_filter == cat.pk %} selected{% endif %}>{{ cat }}</option>
+					{% endfor %}
+				</select>
+			</div>
+		</div>
+
+		<div class="form-group row">
+			<label class="col-sm-2 col-form-label">{{ titles_of_labels.tag }}</label>
+			<div class="col-sm-10">
+				<select name="tag" class="form-control">
+					<option value="">---------</option>
+					{% for t in tag %}
+						<option value="{{ t.pk }}"{% if tag_filter == t.pk %} selected{% endif %}>{{ t }}</option>
+					{% endfor %}
+				</select>
+			</div>
+		</div>
+
+		<div class="form-group row">
+			<label class="col-sm-2 col-form-label">{{ titles_of_labels.currency }}</label>
+			<div class="col-sm-10">
+				<select name="currency" class="form-control chosen-select">
+				  <option value="">---------</option>
+					{% for code, title in currency %}
+				    <option value="{{ code }}"{% if currency_filter == code %} selected{% endif %}>{{ title }}</option>
+					{% endfor %}
+				</select>
+			</div>
+		</div>
+
+		<div class="form-group row">
+			<label class="col-sm-2 col-form-label">{{ titles_of_labels.contact }}</label>
+			<div class="col-sm-10">
+				<select name="contact" class="form-control">
+				  <option value="">---------</option>
+					{% for c in contact %}
+						<option value="{{ c.pk }}"{% if contact_filter == c.pk %} selected{% endif %}>{{ c }}</option>
+					{% endfor %}
+				</select>
+			</div>
+		</div>
+
+	  <button type="submit" class="btn btn-default">{% trans "Apply Filters and Find Transactions" %}</button>
+	</form>
+
+	<hr>
+{% endif %}

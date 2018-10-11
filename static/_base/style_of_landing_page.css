@@ -1,0 +1,76 @@
+/* This CSS based on free template from https://mdbootstrap.com/freebies/ */
+.gm-style .gm-style-mtc label,.gm-style .gm-style-mtc div{font-weight:400}
+.gm-style .gm-style-cc span,.gm-style .gm-style-cc a,.gm-style .gm-style-mtc div{font-size:10px}
+@media print {  .gm-style .gmnoprint, .gmnoprint {    display:none  }}@media screen {  .gm-style .gmnoscreen, .gmnoscreen {    display:none  }}</style><style type="text/css">.gm-style-pbc{transition:opacity ease-in-out;background-color:rgba(0,0,0,0.45);text-align:center}.gm-style-pbt{font-size:22px;color:white;font-family:Roboto,Arial,sans-serif;position:relative;margin:0;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}
+
+        /* TEMPLATE STYLES */
+
+        .flex-center {
+            color: #fff;
+        }
+        .intro-1 {
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+
+        .navbar .btn-group .dropdown-menu a:hover {
+            color: #000 !important;
+        }
+
+        .navbar .btn-group .dropdown-menu a:active {
+            color: #fff !important;
+        }
+        @media only screen and (max-width: 667px) {
+            .display-3 {
+                font-size: 3rem;
+            }
+        }
+        @media only screen and (max-width: 767px) {
+            .navbar {
+                background-color: #1C2331;
+            }
+            .display-3 {
+                font-size: 2rem;
+                margin-top: 5rem;
+            }
+            h3 {
+                font-size: 1rem;
+            }
+        }
+/* */
+.gm-style {
+        font: 400 11px Roboto, Arial, sans-serif;
+        text-decoration: none;
+      }
+      .gm-style img { max-width: none; }
+/* */
+.md-form.select label {
+    position: absolute;
+    top: -20px;
+    font-size: .8rem;
+}
+footer.page-footer {
+    padding-top: 0 !important;
+}
+#landing_header a:nth-child(1) {
+    visibility: visible; animation-name: fadeInLeft; animation-delay: 0.2s;
+}
+#landing_header a:nth-child(2) {
+    visibility: visible; animation-name: fadeInRight; animation-delay: 0.2s;
+}
+#landing_header h4 {
+    visibility: visible; animation-name: fadeInDown;
+}
+#landing_header h1 {
+    visibility: visible; animation-name: fadeInDown; animation-delay: 0.2s;
+}
+#main_container h2 {
+    visibility: visible; animation-name: fadeIn; animation-delay: 0.2s;
+}
+#about {
+    visibility: visible; animation-name: fadeIn; animation-delay: 0.2s;
+}
+div#main_container {
+    min-height: calc(100vh - 143px);
+}

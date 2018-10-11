@@ -1,0 +1,71 @@
+{% extends "_base/base.html" %}
+
+{% load i18n %}
+
+{% block content %}
+	{% include 'common/if_messages.html' %}
+
+	<div class="card-body table-full-width table-responsive">
+
+		<div>
+			<div><b>{% trans "Parameters of the report" %}:</b></div>
+			<div>{{ labels.0 }}: {{ object.date }}</div>
+			<div>{{ labels.1 }}: {{ object.start_date|default:'' }}</div>
+			<div>{{ labels.2 }}: {{ object.finish_date|default:'' }}</div>
+			<div>{{ labels.3 }}: {% for wallet in object.wallet.all %}<span class="wallet">{{ wallet }}</span>{% endfor %}</div>
+			{% if object.variety == 1 %}
+				<div>{{ labels.4 }}: {{ object.get_currency_title|default:'' }}</div>
+			{% endif %}
+			<div>{{ labels.5 }}: {{ object.contact|default:'' }}</div>
+			<div>{{ labels.6 }}: {% if object.exclude_ignored == True %}<i class="fa fa-check text-success"></i>{% else %}<i class="fa fa-times text-danger"></i>{% endif %}</div>
+		</div>
+
+		<table class="table table-hover table-striped">
+			<thead>
+				<tr>
+					{% if object.variety == 1 %}
+						<th>{% trans "Category" %}</th>
+						<th>{% trans "Balance by Value in currency" %}</th>
+					{% elif object.variety == 2 %}
+						<th>{% trans "Sum Of Income" %}</th>
+					{% elif object.variety == 3 %}
+						<th>{% trans "Sum Of Expense" %}</th>
+					{% endif %}
+				</tr>
+			</thead>
+			<tbody>
+
+				{% if object.variety == 1 %}
+					{% for row in data %}
+						<tr>
+							<td>
+								{% if row.category_null %}
+									{% trans "Balance of transactions without category" %}
+								{% elif row.category__name is None %}
+									{% trans "Deleted Category" %}
+								{% else %}
+									{{ row.category__name }}
+								{% endif %}
+							</td>
+							<td>
+								{% if row.sum_of_values_in_curr is None %}
+									{% trans "No Transactions in this Category" %}
+								{% else %}
+									{{ row.sum_of_values_in_curr }}
+								{% endif %}
+							</td>
+						</tr>
+					{% endfor %}
+					<tr>
+						<td>{% trans "Total Balance (Sum of above)" %}</td>
+						<td>{{ total }}</td>
+					</tr>
+
+				{% elif object.variety == 2 or object.variety == 3 %}
+					<tr><td>{{ data.0.sum_of_values }}</td></tr>
+				{% endif %}
+
+			</tbody>
+		</table>
+	</div>
+{% endblock content %}

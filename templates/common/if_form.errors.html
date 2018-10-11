@@ -1,0 +1,27 @@
+{% load i18n %}
+
+{% if form.errors %}
+<div class="row">
+	<div class="col-md-12">
+		<div class="alert alert-danger" role="alert">
+			{% blocktrans %}Please, correct the <b>following</b>:{% endblocktrans %}
+			<ul>
+				{% for field in form %}
+					{% if field.errors %}
+						<li><a href="#{{ field.auto_id }}" class="error">{{ field.label }}</a>
+							<ul>
+								{% for error in field.errors %}
+									<li>{{ error|escape }}</li>
+								{% endfor %}
+							</ul>
+						</li>
+					{% endif %}
+				{% endfor %}
+			</ul>
+      {% if form.non_field_errors %}
+        {{ form.non_field_errors }}
+      {% endif %}
+		</div>
+	</div>
+</div>
+{% endif %}

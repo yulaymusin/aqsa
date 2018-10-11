@@ -1,0 +1,13 @@
+{% if transaction %}
+  {% load i18n %}
+
+  <form id="paginate_by_form">
+    {% include 'transaction/filter_hidden_input.html' %}
+    <select name="paginate_by" class="form-control" form="paginate_by_form" required>
+      <option value="25"{% if 25 == paginate_by %} selected{% endif %}>{% trans "Show me" %} 25 {% trans "row(s)" %}</option>
+      <option value="50"{% if 50 == paginate_by %} selected{% endif %}>{% trans "Show me" %} 50 {% trans "row(s)" %}</option>
+      <option value="100"{% if 100 == paginate_by %} selected{% endif %}>{% trans "Show me" %} 100 {% trans "row(s)" %}</option>
+    </select>
+    <button type="submit" class="btn btn-default">{% trans "Go" %}</button>
+  </form>
+{% endif %}

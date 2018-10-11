@@ -1,0 +1,79 @@
+{% extends "_base/base.html" %}
+
+{% load i18n %}
+
+{% block content %}
+	<div class="card-body table-full-width table-responsive">
+		{% if import_from_file.no_error and not import_from_file.success %}
+			<p>
+				{% trans "Your file is OK." %}<br>
+				{% if 'check_csv_' not in request.get_full_path and 'check_aqsa_backup' not in request.get_full_path %}
+					{% blocktrans %}
+						Go to the next step for import transaction and wait while transactions from your file will be imported completely.<br>
+						After click, don not leave this page and wait while data from your file will be imported completely (you will see a success message).<br>
+						Note: if will happens some error, you can continue to import data from this file later and data will be not duplicated.
+					{% endblocktrans %}
+				{% endif %}
+			</p>
+	
+			{% if 'check_csv_' not in request.get_full_path %}
+				<form method="POST" action="{{ import_from_file.get_db_records_url }}">
+					{% csrf_token %}
+					<button type="submit" class="btn btn-link">{{ submit_btn }}</button>
+				</form>
+			{% endif %}
+		{% else %}
+			<p>
+				{% trans "Your file contains an error." %}<br>
+				{% if 'check_csv_' not in request.get_full_path and 'check_aqsa_backup' not in request.get_full_path %}
+					{% blocktrans %}
+						Below you can see which field contains a wrong value (<span class="text-danger">red</span>)
+						and which field is OK (<span class="text-success">green</span>).
+					{% endblocktrans %}
+				{% endif %}
+			</p>
+		{% endif %}
+		
+		{% if errors %}
+			<div class="alert alert-danger" role="alert">
+				{% for error in errors %}
+					<b>Row #{{ error.0 }}</b>: {{ error.1 }}
+				{% endfor %}
+			</div>
+		{% endif %}
+
+		{% for note in notes %}
+			<p>{{ note }}</p>
+		{% endfor %}
+
+		{% if titles_of_cols and statement_data %}
+			<table class="table table-hover table-striped table-bordered">
+				<thead>
+					<tr>
+						<th>#</th>
+						{% for title in titles_of_cols %}
+							<th>{{ title }}</th>
+						{% endfor %}
+					</tr>
+				</thead>
+				<tbody>
+					{% for row in statement_data %}
+						<tr>
+							<td>{{ forloop.counter }}</td>
+							{% for field_no_error, field_data in row %}
+								<td class="table-{% if field_no_error %}success{% else %}danger{% endif %}">{{ field_data }}</td>
+							{% endfor %}
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		{% endif %}
+	</div>
+
+	{% if import_from_file.no_error and not import_from_file.success %}
+		<form method="POST" action="{{ import_from_file.get_db_records_url }}">
+			{% csrf_token %}
+			<button type="submit" class="btn btn-success">{{ submit_btn }}</button>
+		</form>
+	{% endif %}
+{% endblock content %}

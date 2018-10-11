@@ -1,0 +1,24 @@
+{% load i18n %}
+
+{% for link in links %}
+  <li class="dropdown">
+    <a href="{{ link.0 }}
+{% if '/transaction/new_income_expense_set' in link.0 %}
+?extra=5
+{% elif '/transaction/list_the_edit_mode' in link.0 or '/transaction/list_filter' in link.0 %}
+?page={{ request.GET.page }}&paginate_by={{ paginate_by }}{% include 'transaction/filter_get_params_str.html' with yes_filter_params=True %}
+{% endif %}">
+      <i class="{{ link.2 }}"></i> {{ link.1 }}</a></li>
+{% endfor %}
+<li class="dropdown">
+  <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+    <i class="fa fa-user fa-fw"></i> {{ request.user }} <i class="fa fa-caret-down"></i>
+  </a>
+  <ul class="dropdown-menu dropdown-messages">
+    <li><a href="{% url 'account:change_password' %}"><i class="fas fa-key fa-fw"></i> {% trans "Change Password" %}</a></li>
+    <li><a href="{% url 'account:update_account' %}"><i class="fas fa-cog fa-fw"></i> {% trans "My Settings" %}</a></li>
+    <li><a href="{% url 'account:delete_account' %}"><i class="fas fa-user-times fa-fw"></i> {% trans "Delete My Account" %}</a></li>
+    <li class="divider"></li>
+    <li><a href="{% url 'logout' %}"><i class="fas fa-sign-out-alt fa-fw"></i> {% trans "Log out" %}</a></li>
+  </ul>
+</li>

@@ -1,0 +1,65 @@
+{% extends "_base/base.html" %}
+
+{% load i18n %}
+{% load model_property from labels_and_fields %}
+
+{% block content %}
+
+	{% include 'common/if_messages.html' %}
+
+	<div class="card-body table-full-width table-responsive">
+		{% if description %}
+			<p>{{ description }}</p>
+		{% endif %}
+		{% if transaction %}
+			<div class="table-responsive transaction_list_table">
+		{% endif %}
+		<table class="table table-hover table-striped{% if transaction %} table-bordered{% endif %}">
+			<thead>
+				<tr>
+					{% for label in labels %}
+						<th>{{ label }}</th>
+					{% endfor %}
+				</tr>
+			</thead>
+			<tbody style="height: auto;">
+				{% for element in objects %}
+					<tr>
+						{% for field_name in fields %}
+							
+							{% if field_name == 'currency' %}
+								<td title="{{ element.get_currency_title }}">{{ element.get_currency_title|slice:':3' }}</td>
+							{% elif field_name == 'tag' %}
+								<td>{% for tag in element.tag.all %}<div>{{ tag }}</div>{% endfor %}</td>
+							{% elif field_name == 'value' or field_name == 'value_in_curr' %}
+								{% if field_name|model_property:element == None %}
+									<td></td>
+								{% else %}
+									<td>{{ field_name|model_property:element }}</td>
+								{% endif %}
+							{% elif field_name == 'description' %}
+								<td>{{ field_name|model_property:element|linebreaksbr }}</td>
+							{% elif field_name|model_property:element == True %}
+								<td class="text-center"><i class="fa fa-check text-success"></i></td>
+							{% elif field_name|model_property:element == False %}
+							  <td class="text-center"><i class="fa fa-times text-danger"></i></td>
+							{% else %}
+								<td class="wh-space-pre">{{ field_name|model_property:element|default:'' }}</td>
+							{% endif %}
+							
+						{% endfor %}
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+		{% if transaction %}
+			</div>
+		{% endif %}
+	</div>
+
+	<form method="POST">
+		{% csrf_token %}
+		<button type="submit" class="btn btn-warning">{{ submit_btn }}</button>
+	</form>
+
+{% endblock content %}

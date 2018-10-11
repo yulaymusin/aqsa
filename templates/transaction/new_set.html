@@ -1,0 +1,70 @@
+{% extends "_base/base.html" %}
+
+{% load i18n %}
+{% load form_control textarea chosen_select from style %}
+
+{% block content %}
+
+	{% include 'transaction/if_formset.errors.html' %}
+
+	<div class="table-full-width table-responsive">
+		<form method="post" id="transaction_new_set">
+			{% csrf_token %}
+			{{ formset.management_form }}
+			<div class="table-responsive transaction_list_table" id="transaction_new_set_table">
+				<table class="table table-hover table-striped ">
+					<thead>
+						<tr>
+							{% for field in formset.0 %}
+								{% if forloop.first %}<th>#</th>{% endif %}
+																			<th>{{ field.label }}</th>
+				        {% if forloop.last %} <th></th>{% endif %}
+							{% endfor %}
+						</tr>
+					</thead>
+					<tbody>
+						{% for form in formset %}
+							<tr>
+								<td>{{ forloop.counter }}</td>
+								{% for field in form %}
+									<td>
+										<div class="form-group{% if field.errors %} has-error{% endif %}{% if 'date' in field.name %} datetimepicker{% endif %}{% if 'tag' in field.name or 'description' in field.name %} more_height{% endif %}">
+											{% if 'description' in field.name %}
+												{{ field|textarea }}
+											{% elif 'currency' in field.name %}
+												{{ field|chosen_select }}
+											{% else %}
+												{{ field|form_control }}
+											{% endif %}
+										</div>
+									</td>
+								{% endfor %}
+							</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+			</div>
+		</form>
+	</div>
+
+	<div class="btn-group"><button type="submit" class="btn btn-info btn-fill" form="transaction_new_set">{% trans "Save all transactions" %}</button></div>
+	&nbsp;
+	{% if request.method == 'GET' %}
+		<form class="inline-flex">
+			<select name="extra" class="form-control" required>
+				{% for i in "x"|rjust:"15" %}
+					<option value="{{ forloop.counter }}"{% if forloop.counter == extra %} selected{% endif %}>{% trans "Show me" %} {{ forloop.counter }} {% trans "row(s)" %}</option>
+				{% endfor %}
+			</select>
+			<button type="submit" class="btn btn-default">Go</button>
+		</form>
+	{% endif %}
+
+	{% include 'transaction/comfortable_or_compact_btn.html' %}
+
+{% endblock %}
+
+{% block body_end %}
+	{{ block.super }}
+	{% include 'common/datetimepicker.html' with new_set=True %}
+{% endblock body_end %}

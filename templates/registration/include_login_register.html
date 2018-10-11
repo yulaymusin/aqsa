@@ -1,0 +1,43 @@
+{% if '/register/login' not in request.get_full_path %}
+
+{% load i18n %}
+
+	<div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				
+				<div class="modal-header text-center">
+					<h4 class="modal-title w-100 font-weight-bold">{% trans "Sign in" %}</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				</div>
+				
+				<form method="post" action="{% url 'login' %}">
+					{% csrf_token %}
+					<div class="modal-body mx-3">
+						<div class="md-form mb-5">
+							<i class="fa fa-user prefix grey-text"></i>
+							<input type="text" name="username" maxlength="150" required="" id="id_username" class="form-control validate">
+							<label for="id_username">{% trans "Your username:" %}</label>
+						</div>
+					
+						<div class="md-form mb-4">
+							<i class="fa fa-lock prefix grey-text"></i>
+							<input type="password" name="password" required="" id="id_password" class="form-control validate">
+							<label for="id_password" class="">{% trans "Your password:" %}</label>
+						</div>
+					</div>
+					
+					<div class="modal-footer d-flex justify-content-center">
+						<div class="options text-center text-md-right mt-1">
+							<p>{% trans "Not a member?" %} <a href="{% url 'signup' %}" class="blue-text">{% trans "Sign Up" %}</a></p>
+							<p>{% trans "Forgot" %} <a href="{% url 'password_reset' %}" class="blue-text">{% trans "Password" %}?</a></p>
+						</div>
+						<button type="submit" class="btn btn-default ml-auto">{% trans "Log In" %}</button>
+					</div>
+					<input type="hidden" name="next" value="{% url 'dashboard:home' %}">
+				</form>
+				
+			</div>
+		</div>
+	</div>
+{% endif %}

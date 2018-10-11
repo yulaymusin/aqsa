@@ -1,0 +1,41 @@
+{% load i18n %}
+
+<li><a href="{% url 'dashboard:home' %}"{% if '/dashboard/' in request.get_full_path %} class="active"{% endif %}>
+  <i class="fas fa-tachometer-alt fa-fw"></i> {% trans "Dashboard" %}</a></li>
+
+<li><a href="{% url 'transaction:list' %}"{% if '/transaction/' in request.get_full_path %} class="active"{% endif %}>
+  <i class="fas fa-clipboard-list fa-fw"></i> {% trans "Transactions" %}</a></li>
+
+<li>
+  <a href="#"><i class="fas fa-chart-line fa-fw"></i> {% trans "Reports" %}<span class="fa arrow"></span></a>
+  <ul class="nav nav-second-level">
+
+    <li><a href="{% url 'report:balance_of_category_list' %}"{% if '/report/balance_of_category' in request.get_full_path %} class="active"{% endif %}>
+      {% trans "Balance of every Category (Sum Of Transactions), also total balance" %}</a></li>
+
+    <li><a href="{% url 'report:sum_of_income_list' %}"{% if '/report/sum_of_income' in request.get_full_path %} class="active"{% endif %}>
+      {% trans "Sum Of Income" %}</a></li>
+
+    <li><a href="{% url 'report:sum_of_expense_list' %}"{% if '/report/sum_of_expense' in request.get_full_path %} class="active"{% endif %}>
+      {% trans "Sum Of Expense" %}</a></li>
+
+  </ul>
+</li>
+
+<li><a href="{% url 'wallet_tag_etc:category_list' %}"{% if '/wallet_tag_etc/category/' in request.get_full_path %} class="active"{% endif %}>
+  <i class="fas fa-tag fa-fw"></i> {% trans "Categories" %}</a></li>
+
+<li><a href="{% url 'wallet_tag_etc:tag_list' %}"{% if '/wallet_tag_etc/tag/' in request.get_full_path %} class="active"{% endif %}>
+  <i class="fas fa-tags fa-fw"></i> {% trans "Tags" %}</a></li>
+
+<li><a href="{% url 'wallet_tag_etc:wallet_list' %}"{% if '/wallet_tag_etc/wallet/' in request.get_full_path %} class="active"{% endif %}>
+  <i class="fas fa-wallet"></i> {% trans "Wallets" %}</a></li>
+
+<li><a href="{% url 'wallet_tag_etc:contact_list' %}"{% if '/wallet_tag_etc/contact/' in request.get_full_path %} class="active"{% endif %}>
+  <i class="fas fa-user-tag fa-fw"></i> {% trans "Contacts" %}</a></li>
+
+<li><a href="{% url 'import_from_file:list' %}"{% if '/import_from_file/' in request.get_full_path %} class="active"{% endif %}>
+  <i class="fas fa-paperclip fa-fw"></i> {% trans "Import from file" %}</a></li>
+
+<li><a href="{% url 'export_to_file:home' %}"{% if '/export_to_file/' in request.get_full_path %} class="active"{% endif %}>
+  <i class="fas fa-cloud-download-alt fa-fw"></i> {% trans "Export to file" %}</a></li>

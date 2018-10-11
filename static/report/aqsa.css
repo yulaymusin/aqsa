@@ -1,0 +1,8 @@
+/* <Waller parameter of a report. For read report urls */
+span.wallet::after {
+  content: ', ';
+}
+span.wallet:last-child::after {
+  content: '.';
+}
+/* </Waller parameter of a report. For read report urls */

@@ -1,0 +1,3 @@
+{% if yes_filter_params or '/transaction/list_the_edit_mode' in uri or '/transaction/list_filter' in uri %}
+&transfer={{ transfer_filter|default:'' }}&wallet={{ wallet_filter|default:'' }}&category={{ category_filter|default:'' }}&tag={{ tag_filter|default:'' }}&currency={{ currency_filter|default:'' }}&contact={{ contact_filter|default:'' }}
+{% endif %}

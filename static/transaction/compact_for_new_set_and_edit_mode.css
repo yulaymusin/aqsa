@@ -1,0 +1,31 @@
+/* <for URI: "new_income_expense_set" and "list_the_edit_mode" */
+.transaction_list_table tbody td .form-group {
+    margin: 0;
+}
+.transaction_list_table .form-control,
+.transaction_list_table .form-control:hover,
+.transaction_list_table .form-control:focus {
+    padding: 0;
+    margin: 0;
+    height: 19px !important;
+    max-width: 110px;
+}
+.transaction_list_table select[name="tag"],
+.transaction_list_table select[name="tag"]:hover,
+.transaction_list_table select[name="tag"]:focus,
+.transaction_list_table textarea[name="description"],
+.transaction_list_table textarea[name="description"]:hover,
+.transaction_list_table textarea[name="description"]:focus,
+.transaction_list_table .more_height select,
+.transaction_list_table .more_height select:hover,
+.transaction_list_table .more_height select:focus,
+.transaction_list_table .more_height textarea,
+.transaction_list_table .more_height textarea:hover,
+.transaction_list_table .more_height textarea:focus {
+    height: 48px !important;
+}
+.transaction_list_table thead th, {
+.transaction_list_table tbody td {
+  min-width: 88px !important;
+}
+/* </for URI: "new_income_expense_set" and "list_the_edit_mode" */

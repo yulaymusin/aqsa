@@ -1,0 +1,20 @@
+{% load user_locale %}
+
+<script>
+$.datetimepicker.setLocale('{{ request.LANGUAGE_CODE }}');
+
+{% if new_set %}
+	$(".datetimepicker input").datetimepicker({
+{% else %}
+	$("#id_date, #id_bank_date, #id_bank_date1, #id_bank_date2, #id_start_date, #id_finish_date").datetimepicker({
+{% endif %}
+
+		'dayOfWeekStart': {% first_day_of_week request.LANGUAGE_CODE %},
+		'mask': false,
+		'format': '{% short_date_format request.LANGUAGE_CODE %}',
+		'scrollInput': false,
+		'scrollMonth': false,
+		'timepicker': false,
+		'todayButton': true,
+	});
+</script>

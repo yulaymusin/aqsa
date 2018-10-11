@@ -1,0 +1,71 @@
+{% extends "_base/base.html" %}
+
+{% load i18n %}
+
+{% block content %}
+<div class="row">
+  <div class="col-lg-12">
+    <h4 class="page-header">{% trans "Balance of Every Wallet" %}</h4>
+    {% if balance_of_every_wallet %}
+      {% for balance in balance_of_every_wallet %}
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="panel panel-{% if balance.balance is None %}default{% elif balance.balance < 0 %}danger{% elif balance.balance == 0 %}warning{% elif balance.balance > 0 %}success{% endif %}">
+            <div class="panel-heading">{{ balance.wallet }}</div>
+            <div class="panel-body">{% trans "Balance" %}: {% if balance.balance is None %}{% trans "No Transactions" %}{% else %}{{ balance.balance }}{% endif %}</div>
+          </div>
+        </div>
+      {% endfor %}
+    {% else %}
+      <p>{% trans "After you will create a wallets, you can see here balance of every your wallet." %}</p>
+    {% endif %}
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <h4 class="page-header">{% trans "Totals By Wallet" %}</h4>
+    {% if totals_by_wallet %}
+      {% for total in totals_by_wallet %}
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="panel panel-default">
+            <div class="panel-heading">{{ total.wallet }}</div>
+            <div class="panel-body">
+              {% trans "Income" %}: {% if total.sum_of_income is None %}{% trans "No Income" %}{% else %}{{ total.sum_of_income }}{% endif %}<br>
+              {% trans "Expense" %}: {% if total.sum_of_expense is None %}{% trans "No Expense" %}{% else %}{{ total.sum_of_expense }}{% endif %}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    {% else %}
+      <p>
+        {% trans "After you will create a wallet and transaction, you can see here total income and total expense of every wallet." %}<br>
+        {% trans "Transactions, marked as ignored, will be not included to the total." %}
+      </p>
+    {% endif %}
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <h4 class="page-header">{% trans "Totals By Currency" %}</h4>
+    {% if totals_by_currency %}
+      {% for total in totals_by_currency %}
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="panel panel-default">
+            <div class="panel-heading">{{ total.currency }}</div>
+            <div class="panel-body">
+              {% trans "Income" %}: {% if total.sum_of_income is None %}{% trans "No Income" %}{% else %}{{ total.sum_of_income }}{% endif %}<br>
+              {% trans "Expense" %}: {% if total.sum_of_expense is None %}{% trans "No Expense" %}{% else %}{{ total.sum_of_expense }}{% endif %}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    {% else %}
+      <p>
+        {% trans "After you add a transactions, you can see here total income and total expense in every currency." %}<br>
+        {% trans "Transactions, marked as ignored, will be not included to the total." %}
+      </p>
+    {% endif %}
+  </div>
+</div>
+{% endblock content %}

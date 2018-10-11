@@ -1,0 +1,12 @@
+{# included in "new_set.html" and "list_the_edit_mode.html" templates #}
+{% load i18n %}
+
+{% if not 'comfortable=1' in request.get_full_path %}
+	<a href="?comfortable=1&extra={{ extra }}&page={{ request.GET.page }}&paginate_by={{ paginate_by }}{% include 'transaction/filter_get_params_str.html' with uri=request.get_full_path %}" class="btn btn-default comfort-view-btn">
+		{% trans "Comfortable View of the Table" %}
+	</a>
+{% else %}
+	<a href="?comfortable=0&extra={{ extra }}&page={{ request.GET.page }}&paginate_by={{ paginate_by }}{% include 'transaction/filter_get_params_str.html' with uri=request.get_full_path %}" class="btn btn-default comfort-view-btn">
+		{% trans "Compact View of the Table" %}
+	</a>
+{% endif %}

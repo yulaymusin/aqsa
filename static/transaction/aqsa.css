@@ -1,0 +1,118 @@
+/* <Change paginate_by to another num */
+#paginate_by_form {
+  display: inline-flex;
+  float: right;
+  margin: 10px 0;
+}
+/* </Change paginate_by to another num */
+/* <Pagination and the "Comfortable/Compact View of the Table" button */
+.comfort-view-btn {
+  float: right;
+  margin: 10px 4px;
+}
+.pager, .pagination {
+  margin: 10px 0 !important;
+}
+/* </Pagination and the "Comfortable/Compact View of the Table" button */
+
+
+
+/* <Scrollbars for tables */
+/* TODO: Scrollbar styles also for another browsers, not only "webkit" */
+.transaction_list_table tbody::-webkit-scrollbar {
+  width: 12px;
+}
+.transaction_list_table tbody::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 10px;
+}
+.transaction_list_table tbody::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+/* </Scrollbars for tables */
+
+
+
+/* <Common styles for tables */
+.table>tbody>tr>td {
+  /* Table looks more compact and more informative */
+  padding-top: 0px !important;
+}
+.transaction_list_table table {
+  margin-bottom: 0;
+}
+
+
+.transaction_list_table table {
+  position: relative;
+  width: calc(100vw - 367px);
+  overflow: hidden;
+  border-collapse: collapse;
+}
+
+
+.transaction_list_table thead {
+  position: relative;
+  display: block;
+  width: calc(100vw - 367px);
+  overflow: visible;
+}
+.transaction_list_table thead th {
+  /*vertical-align: top !important;*/
+}
+
+
+.transaction_list_table tbody {
+  position: relative;
+  display: block;
+  width: calc(100vw - 367px);
+  /* - 190px - then buttons will be shown */
+  height: calc(100vh - 130px);
+  overflow: scroll;
+}
+.transaction_list_table tbody td {
+  min-width: 120px;
+}
+
+
+@media screen and (max-width: 991px) {
+  .transaction_list_table table {
+    width: calc(100vw - 62px);
+  }
+  .transaction_list_table thead {
+    width: calc(100vw - 62px);
+  }
+  .transaction_list_table tbody {
+    width: calc(100vw - 62px);
+  }
+}
+@media screen and (max-width: 767px) {
+  .table-responsive>.table>thead>tr>th {
+    white-space: unset;
+  }
+}
+/* </Common styles for tables */
+
+
+
+/* <for URI: "new_income_expense_set" */
+#transaction_new_set_table thead th:nth-child(1) {  /* first cell of thead */
+  position: relative;
+  display: block;
+  background-color: #fff;
+  height: 78px;
+  padding: 29px 0 0 15px;
+  margin-bottom: -1px;
+}
+#transaction_new_set_table tbody tr td:nth-child(1) {  /* first cell in each row of tbody */
+  position: relative;
+  display: block; /* seperates the first column from the tbody */
+  background-color: #fff;
+  vertical-align: middle !important;
+  min-width: auto;
+}
+/*#transaction_new_set_table tbody tr td:first-child a:first-child {
+    display: none;
+}*/
+/* </for URI: "new_income_expense_set" */

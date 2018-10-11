@@ -1,0 +1,37 @@
+{% extends "_base/base_of_landing_page.html" %}
+
+{% load i18n %}
+
+{% block title %}{% trans "Sign Up" %} - {{ block.super }}{% endblock title %}
+
+{% block h1 %}{% trans "Sign Up" %}{% endblock h1 %}
+
+{% block content %}
+  <form method="post">
+    {% csrf_token %}
+    {% for field in form %}
+      <div class="row">
+        <div class="col-md-12">
+          <div class="md-form"{% if field.errors %} style="background: #ff00000f;"{% endif %}>
+            {{ field }}
+            {{ field.label_tag }}
+            
+            {% if field.help_text %}
+              <small class="text-left text-muted">{{ field.help_text|safe }}</small>
+            {% endif %}
+            {% for error in field.errors %}
+              <p class="text-left text-danger">{{ error }}</p>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+    
+    <div class="center-on-small-only">
+      <button type="submit" class="btn btn-primary waves-effect waves-light">{% trans "Sign Up" %}</button>
+    </div>
+    
+  </form>
+{% endblock %}
+
+{% block landing_footer %}{% endblock landing_footer %}

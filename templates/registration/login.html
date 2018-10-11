@@ -1,0 +1,43 @@
+{% extends "_base/base_of_landing_page.html" %}
+
+{% load i18n %}
+
+{% block title %}{% trans "Log In" %} - {{ block.super }}{% endblock title %}
+
+{% block h1 %}{% trans "Log In" %}{% endblock h1 %}
+
+{% block content %}
+  {% if form.errors %}
+    <p class="text-danger">{% trans "Your username and password did not match. Please try again." %}</p>
+  {% endif %}
+
+  <form method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+    <div class="row">
+      <div class="col-md-12">
+        <div class="md-form">
+          {{ form.username }}
+          {{ form.username.label_tag }}
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="md-form">
+          {{ form.password }}
+          {{ form.password.label_tag }}
+        </div>
+      </div>
+    </div>
+    <div class="center-on-small-only">
+      <button type="submit" class="btn btn-primary waves-effect waves-light">{% trans "Log In" %}</button>
+    </div>
+    <input type="hidden" name="next" value="{% url 'dashboard:home' %}">
+  </form>
+
+  <hr>
+  <p><a href="{% url 'password_reset' %}" class="">{% trans "Lost password?" %}</a></p>
+  <p>{% trans "Not a member?" %} <a href="{% url 'signup' %}" class="blue-text">{% trans "Sign Up" %}</a></p>
+{% endblock %}
+
+{% block landing_footer %}{% endblock landing_footer %}

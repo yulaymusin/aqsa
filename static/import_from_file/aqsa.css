@@ -1,0 +1,8 @@
+/* <Radio buttons. Uri: /import_from_file/upload_backup_or_csv */
+ul#id_variety {
+    list-style-type: none;
+}
+ul#id_variety input {
+    display: inline-block;
+}
+/* </Radio buttons. Uri: /import_from_file/upload_backup_or_csv */

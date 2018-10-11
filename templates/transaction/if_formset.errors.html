@@ -1,0 +1,32 @@
+{% load i18n %}
+
+{% if request.POST and not formset.is_valid %}
+	<div class="row">
+		<div class="col-md-12">
+			<div class="alert alert-danger" role="alert">
+				{% blocktrans %}Please, correct the <b>following</b>:{% endblocktrans %}
+				{% for form in formset %}
+					{% if not form.is_valid %}
+						<p>{% trans "In row" %} <b>{{ forloop.counter }}</b>:</p>
+						<ul>
+							{% for field in form %}
+								{% if field.errors %}
+									<li><a href="#{{ field.auto_id }}" class="error">{{ field.label }}</a>
+										<ul>
+											{% for error in field.errors %}
+												<li>{{ error|escape }}</li>
+											{% endfor %}
+										</ul>
+									</li>
+								{% endif %}
+							{% endfor %}
+						</ul>
+					{% endif %}
+				{% endfor %}
+	      {% if form.non_field_errors %}
+	        {{ form.non_field_errors }}
+	      {% endif %}
+			</div>
+		</div>
+	</div>
+{% endif %}

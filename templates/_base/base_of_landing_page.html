@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+{% spaceless %}
+{% comment %}
+  (c) 2018 Author of Aqsa: Yulay Musin.
+  Under MIT License.
+
+  This HTML based on free template from https://mdbootstrap.com/freebies/
+{% endcomment %}
+{% load static from staticfiles %}
+<html lang="{{ request.LANGUAGE_CODE }}"{% block html_class %}{% endblock html_class %}>
+<head>
+  <title>{% block title %}The Aqsa{% endblock title %}</title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  {# Source of icon: https://www.iconfinder.com/icons/65600/coins_money_silver_icon #}
+  <link rel="shortcut icon" href="{% static '_base/favicon.ico' %}" />
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.5/css/mdb.min.css">
+  <link rel="stylesheet" href="{% static '_base/style_of_landing_page.css' %}">
+</head>
+
+<body>
+  <header>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark indigo fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="{% url 'about:homepage' %}">The Aqsa</a>
+        
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item btn-group">
+              <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Choose language</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="/en/">English</a>
+              </div>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav nav-flex-icons ml-auto">
+            {# Login / register #}
+            {% if '/registration/login' not in request.get_full_path and not user.is_authenticated %}
+            <li class="nav-item" data-toggle="modal" data-target="#modalLoginForm"><a href="#" id="navbar-static-login" class="nav-link waves-effect waves-light"><i class="fa fa-sign-in mr-1"></i><span class="clearfix d-none d-sm-inline-block">Log In</span></a></li>
+            {% endif %}
+            {% if user.is_authenticated %}
+            <li class="nav-item"><a href="{% url 'dashboard:home' %}" class="nav-link waves-effect waves-light"><i class="fa fa-sign-in mr-1"></i><span class="clearfix d-none d-sm-inline-block">Open Dashboard</span></a></li>
+            {% endif %}
+          </ul>
+        </div>
+        
+      </div>
+    </nav>
+    
+    {% block landing_header %}
+    <section class="view intro-1 hm-black-slight" id="landing_header">
+      <div class="full-bg-img flex-center">
+        <div class="container">
+          <ul>
+            <li>
+              <h1 class="display-3 font-bold wow fadeInDown" data-wow-delay="0.2s">Personal Finance Software</h1>
+            </li>
+            <li>
+              <h4 class="mt-4 mb-5 wow fadeInDown">Aqsa made for help you to calculate your expenses, income and balance</h4>
+            </li>
+            <li>
+              <a href="{% url 'signup' %}" class="btn btn-indigo btn-lg wow fadeInLeft waves-effect waves-light" data-wow-delay="0.2s">Sign up and try Aqsa!</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    {% endblock landing_header %}
+
+  </header>
+  {# <Main_container> #}
+  <div class="container" id="main_container">
+    <div class="divider-new pt-5">
+      <h2 class="h2-responsive indigo-text mx-4 font-bold wow fadeIn" data-wow-delay="0.2s">
+        <strong>
+          
+          {% block h1 %}About Aqsa{% endblock h1 %}
+          
+        </strong>
+      </h2>
+    </div>
+    <section id="about" class="text-center wow fadeIn" data-wow-delay="0.2s">
+
+			{% block content %}
+			{% endblock content %}
+
+    </section>
+    
+    {% block landing_features %}{% endblock landing_features %}
+    
+  </div>
+  {# </Main_container> #}
+  
+  <footer class="page-footer center-on-small-only indigo mt-5">
+    <div class="container-fluid pr-0 pl-0">
+      
+      {% block landing_footer %}
+      <div class="call-to-action">
+        <ul>
+          <li><a href="{% url 'signup' %}" class="btn btn-outline-white waves-effect waves-light" rel="nofollow">Sign up and start to count income and expenses with Aqsa!</a></li>
+        </ul>
+      </div>
+      {% endblock landing_footer %}
+
+      <div class="footer-copyright"><div class="container-fluid">Aqsa made by Yulay Musin.</div></div>
+
+    </div>
+  </footer>
+
+  <style>.intro-1{background-image: url({% static '_base/background.jpg' %});}</style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>
+  <script>new WOW().init();</script>
+
+  {% include 'registration/include_login_register.html' %}
+</body>
+</html>
+{% endspaceless %}

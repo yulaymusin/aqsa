@@ -1,0 +1,41 @@
+{% extends "_base/base.html" %}
+
+{% load i18n %}
+
+{% block content %}
+<div class="card-body">
+	<p>
+		{% blocktrans %}
+			On this page you can export your data to CSV file.<br>
+			Resulting file you can easily import to spreadsheet software,<br>
+			like LibreOffice Calc, WPS Spreadsheets, MS Excel or another (check documentation of the software how to do that).<br>
+			List of your transactions will contain names of your wallets, contacts, etc.
+		{% endblocktrans %}
+	</p>
+	<p>
+		{% blocktrans %}
+			If you want to get a back up file which will contain your categories, tags, wallets, contacts and transactions,<br>
+			download your data in one ZIP-file. Resulting file you can easily import to another Aqsa account.
+		{% endblocktrans %}
+	</p>
+	<p>
+		{% blocktrans %}
+			Note: do not import your back up file or the list of transactions to this account, unless every your transaction will be duplicated.
+		{% endblocktrans %}
+	</p>
+	
+	<p><a href="{% url 'export_to_file:all_to_csv_and_zip' all_to_csv_and_zip_filename %}" class="btn btn-info btn-fill">
+		{% trans "Download all of below in one ZIP-file" %}</a></p>
+	<p><a href="{% url 'export_to_file:category_to_csv' category_to_csv_filename %}" class="btn btn-default">
+		{% trans "Download list of my categories in CSV" %}</a></p>
+	<p><a href="{% url 'export_to_file:tag_to_csv' tag_to_csv_filename %}" class="btn btn-default">
+		{% trans "Download list of my tags in CSV" %}</a></p>
+	<p><a href="{% url 'export_to_file:wallet_to_csv' wallet_to_csv_filename %}" class="btn btn-default">
+		{% trans "Download list of my wallets in CSV" %}</a></p>
+	<p><a href="{% url 'export_to_file:contact_to_csv' contact_to_csv_filename %}" class="btn btn-default">
+		{% trans "Download list of my contacts in CSV" %}</a></p>
+	<p><a href="{% url 'export_to_file:transaction_to_csv' transaction_to_csv_filename %}" class="btn btn-default">
+		{% trans "Download list of my transactions in CSV" %}</a>
+	<p>
+</div>
+{% endblock content %}

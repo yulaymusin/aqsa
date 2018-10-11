@@ -1,0 +1,8 @@
+{% if '/transaction/list_the_edit_mode' in request.get_full_path or '/transaction/list_filter' in request.get_full_path %}
+  <input type="hidden" name="transfer" value="{{ transfer_filter|default:'' }}">
+  <input type="hidden" name="wallet" value="{{ wallet_filter|default:'' }}">
+  <input type="hidden" name="category" value="{{ category_filter|default:'' }}">
+  <input type="hidden" name="tag" value="{{ tag_filter|default:'' }}">
+  <input type="hidden" name="currency" value="{{ currency_filter|default:'' }}">
+  <input type="hidden" name="contact" value="{{ contact_filter|default:'' }}">
+{% endif %}

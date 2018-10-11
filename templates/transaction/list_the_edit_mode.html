@@ -1,0 +1,204 @@
+{% extends "_base/base.html" %}
+
+{% load i18n %}
+{% load l10n %}
+
+{% block content %}
+	<div class="table-full-width table-responsive transaction_list_table">
+		<table class="table table-hover table-striped table-bordered">
+			<thead>
+				<tr>
+					{% comment %}
+					TODO: AJAX actions
+					<th>{% trans "Actions" %}</th>
+					{% endcomment %}
+					<th>{{ titles_of_thead.transfer }}</th>
+					<th>{{ titles_of_thead.value }}</th>
+					<th>{{ titles_of_thead.wallet }}</th>
+					<th>{{ titles_of_thead.date }}</th>
+					<th>{{ titles_of_thead.description }}</th>
+					<th>{{ titles_of_thead.category }}</th>
+					<th>{{ titles_of_thead.tag }}</th>
+					<th>{{ titles_of_thead.currency }}</th>
+					<th>{{ titles_of_thead.value_in_curr }}</th>
+					<th>{{ titles_of_thead.contact }}</th>
+					<th>{{ titles_of_thead.not_ignore }}</th>
+					<th>{{ titles_of_thead.bank_date }}</th>
+					<th>{{ titles_of_thead.bank_ta_id }}</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for elem in object_list %}
+					<tr>
+						{% comment %}
+						TODO: AJAX make copy and AJAX delete
+						<td>
+							<small class="text-muted">
+								<a>{% trans "Copy" %}</a> |
+								<a>{% trans "Delete" %}</a>
+							</small>
+						</td>
+						{% endcomment %}
+						
+						<!-- form, transfer -->
+						
+						<td class="text-center">
+							
+							<form id="{{ elem.id }}" action="{{ elem.get_update_ajax_url }}">{% csrf_token %}</form>
+							
+							{% if elem.transfer %}
+								<i class="fas fa-exchange-alt"></i>
+							{% endif %}
+						</td>
+						
+						<!-- value, wallet, date, description, category, tag -->
+						
+						<td>
+							{% if not elem.transfer %}
+							<div class="form-group">
+								<input type="number" name="value" step="0.01" class="form-control" value="{{ elem.value|unlocalize }}" form="{{ elem.id }}">
+							</div>
+							{% else %}
+								{{ elem.value|unlocalize }}
+							{% endif %}
+						</td>
+						<td>
+							{% if not elem.transfer %}
+							<div class="form-group">
+								<select name="wallet" class="form-control" form="{{ elem.id }}">
+									<option value="">---------</option>
+									{% for w in wallet %}
+										<option value="{{ w.pk }}"{% if elem.wallet == w %} selected{% endif %}>{{ w }}</option>
+									{% endfor %}
+								</select>
+							</div>
+							{% else %}
+								{{ elem.wallet }}
+							{% endif %}
+						</td>
+						<td>
+							{% if not elem.transfer %}
+							<div class="form-group">
+								<input type="text" name="date" class="form-control" value="{{ elem.date|default:''|date:'SHORT_DATE_FORMAT' }}" form="{{ elem.id }}" id="id_date">
+							</div>
+							{% else %}
+								{{ elem.date|default:''|date:'SHORT_DATE_FORMAT' }}
+							{% endif %}
+						</td>
+						<td>
+							<div class="form-group">
+								<textarea name="description" maxlength="200" class="form-control" form="{{ elem.id }}">{{ elem.description }}</textarea>
+							</div>
+						</td>
+						<td>
+							{% if not elem.transfer %}
+								<div class="form-group">
+									<select name="category" class="form-control" form="{{ elem.id }}">
+										<option value="">---------</option>
+										{% for cat in category %}
+											<option value="{{ cat.pk }}"{% if elem.category == cat %} selected{% endif %}>{{ cat }}</option>
+										{% endfor %}
+									</select>
+								</div>
+							{% elif elem.transfer %}
+								{{ elem.category|default:'' }}
+							{% endif %}
+						</td>
+						<td>
+							<div class="form-group">
+								<select name="tag" multiple="multiple" class="form-control" form="{{ elem.id }}">
+									{% for t in tag %}
+										<option value="{{ t.pk }}"{% if t in elem.tag.all %} selected{% endif %}>{{ t }}</option>
+									{% endfor %}
+								</select>
+							</div>
+						</td>
+						
+						<!-- currency, value_in_curr -->
+						
+						<td>
+							{% if not elem.transfer %}
+								<div class="form-group">
+									<select name="currency" class="form-control chosen-select" form="{{ elem.id }}">
+									  <option value="">---------</option>
+										{% for code, title in currency %}
+									    <option value="{{ code }}"{% if code == elem.currency %} selected{% endif %}>{{ title }}</option>
+										{% endfor %}
+									</select>
+								</div>
+							{% elif elem.transfer %}
+								<div title="{{ elem.get_currency_title }}">{{ elem.get_currency_title|slice:':3' }}</div>
+							{% endif %}
+						</td>
+						<td>
+							{% if not elem.transfer %}
+								<div class="form-group">
+									<input type="number" name="value_in_curr" step="0.01" class="form-control" value="{{ elem.value_in_curr|unlocalize }}" form="{{ elem.id }}">
+								</div>
+							{% elif elem.transfer %}
+								{{ elem.value_in_curr|default:'' }}
+							{% endif %}
+						</td>
+						
+						<!-- contact -->
+						
+						<td>
+							{% if not elem.transfer %}
+								<div class="form-group">
+									<select name="contact" class="form-control" form="{{ elem.id }}">
+									  <option value="">---------</option>
+										{% for c in contact %}
+											<option value="{{ c.pk }}"{% if elem.contact == c %} selected{% endif %}>{{ c }}</option>
+										{% endfor %}
+									</select>
+								</div>
+							{% elif elem.transfer %}
+								{{ elem.contact|default:'' }}
+							{% endif %}
+						</td>
+						
+						<!-- not_ignore -->
+						
+						<td>
+							{% if not elem.transfer %}
+								<div class="form-group">
+									<input type="checkbox" name="not_ignore" class="form-control"{% if elem.not_ignore %} checked{% endif %} form="{{ elem.id }}">
+								</div>
+							{% elif elem.transfer %}
+								{% if elem.not_ignore %}
+									<i class="fa fa-check text-success"></i>
+								{% else %}
+									<i class="fa fa-times text-danger"></i>
+								{% endif %}
+							{% endif %}
+						</td>
+
+						<!-- bank_date, bank_ta_id -->
+						
+						<td>
+							<div class="form-group">
+								<input type="text" name="bank_date" class="form-control" value="{{ elem.bank_date|default:''|date:'SHORT_DATE_FORMAT' }}" form="{{ elem.id }}" id="id_bank_date">
+							</div>
+						</td>
+						<td>
+							<div class="form-group">
+								<input type="text" name="bank_ta_id" maxlength="20" class="form-control" value="{{ elem.bank_ta_id }}" form="{{ elem.id }}">
+							</div>
+						</td>
+						
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+
+	{% include 'common/pagination.html' %}
+	{% include 'transaction/paginate_by_form.html' %}
+	{% include 'transaction/comfortable_or_compact_btn.html' %}
+
+{% endblock content %}
+
+{% block body_end %}
+	{{ block.super }}
+	{% include 'common/datetimepicker.html' %}
+{% endblock body_end %}
