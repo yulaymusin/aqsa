@@ -1,5 +1,6 @@
 # Author of Aqsa: Yulay Musin
 from django import template
+from django import forms
 register = template.Library()
 
 
@@ -17,3 +18,8 @@ def textarea(field):
 @register.filter(name='chosen_select')
 def chosen_select(field):
     return field.as_widget(attrs={'class': 'form-control chosen-select'})
+
+
+@register.filter(name='input_type_date')
+def input_type_date(field):
+    return field.as_widget(widget=forms.DateInput(attrs={'type': 'date', 'class': 'form-control'}))

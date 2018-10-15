@@ -79,7 +79,7 @@
 						<td>
 							{% if not elem.transfer %}
 							<div class="form-group">
-								<input type="text" name="date" class="form-control" value="{{ elem.date|default:''|date:'SHORT_DATE_FORMAT' }}" form="{{ elem.id }}" id="id_date">
+								<input type="{% if 'mobile' in request.META.HTTP_USER_AGENT|lower %}date{% else %}text{% endif %}" name="date" class="form-control" value="{% if 'mobile' in request.META.HTTP_USER_AGENT|lower %}{{ elem.date|default:''|date:'c' }}{% else %}{{ elem.date|default:''|date:'SHORT_DATE_FORMAT' }}{% endif %}" form="{{ elem.id }}" id="id_date">
 							</div>
 							{% else %}
 								{{ elem.date|default:''|date:'SHORT_DATE_FORMAT' }}
@@ -177,7 +177,7 @@
 						
 						<td>
 							<div class="form-group">
-								<input type="text" name="bank_date" class="form-control" value="{{ elem.bank_date|default:''|date:'SHORT_DATE_FORMAT' }}" form="{{ elem.id }}" id="id_bank_date">
+								<input type="{% if 'mobile' in request.META.HTTP_USER_AGENT|lower %}date{% else %}text{% endif %}" name="bank_date" class="form-control" value="{% if 'mobile' in request.META.HTTP_USER_AGENT|lower %}{{ elem.bank_date|default:''|date:'c' }}{% else %}{{ elem.bank_date|default:''|date:'SHORT_DATE_FORMAT' }}{% endif %}" form="{{ elem.id }}" id="id_bank_date">
 							</div>
 						</td>
 						<td>
@@ -197,8 +197,3 @@
 	{% include 'transaction/comfortable_or_compact_btn.html' %}
 
 {% endblock content %}
-
-{% block body_end %}
-	{{ block.super }}
-	{% include 'common/datetimepicker.html' %}
-{% endblock body_end %}

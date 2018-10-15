@@ -1,7 +1,7 @@
 {% extends "_base/base.html" %}
 
 {% load i18n %}
-{% load form_control textarea chosen_select from style %}
+{% load form_control textarea chosen_select input_type_date from style %}
 
 {% block content %}
 
@@ -33,6 +33,12 @@
 												{{ field|textarea }}
 											{% elif 'currency' in field.name %}
 												{{ field|chosen_select }}
+											{% elif field.name == 'date' or field.name == 'bank_date' %}
+												{% if 'mobile' in request.META.HTTP_USER_AGENT|lower %}
+													{{ field|input_type_date }}
+												{% else %}
+													{{ field|form_control }}
+												{% endif %}
 											{% else %}
 												{{ field|form_control }}
 											{% endif %}
@@ -63,8 +69,3 @@
 	{% include 'transaction/comfortable_or_compact_btn.html' %}
 
 {% endblock %}
-
-{% block body_end %}
-	{{ block.super }}
-	{% include 'common/datetimepicker.html' with new_set=True %}
-{% endblock body_end %}

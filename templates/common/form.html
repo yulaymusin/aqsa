@@ -1,7 +1,7 @@
 {% extends "_base/base.html" %}
 
 {% load i18n %}
-{% load form_control textarea chosen_select from style %}
+{% load form_control textarea chosen_select input_type_date from style %}
 
 {% block content %}
 
@@ -20,6 +20,12 @@
 					<div class="col-sm-10">
 						{% if 'id_description' in field.id_for_label %}
 							{{ field|textarea }}
+						{% elif field.name == 'date' or field.name == 'bank_date' or field.name == 'bank_date1' or field.name == 'bank_date2' or field.name == 'start_date' or field.name == 'finish_date' %}
+							{% if 'mobile' in request.META.HTTP_USER_AGENT|lower %}
+								{{ field|input_type_date }}
+							{% else %}
+								{{ field|form_control }}
+							{% endif %}
 						{% elif field.name == 'currency' %}
 							{{ field|chosen_select }}
 						{% else %}
@@ -39,10 +45,3 @@
 		</form>
 	</div>
 {% endblock %}
-
-{% block body_end %}
-	{% if datetimepicker %}
-		{{ block.super }}
-		{% include 'common/datetimepicker.html' %}
-	{% endif %}
-{% endblock body_end %}
