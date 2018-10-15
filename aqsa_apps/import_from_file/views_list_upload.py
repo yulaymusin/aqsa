@@ -53,8 +53,8 @@ class UploadBankStatement(LoginRequiredMixin, mix.ContextForGenericView, mix.Req
         # "chmod 777" and PHP can not write to the folder of user. Finally redirect user to "get_check_url".
         if form.instance.bank == 'rub_sberbank' and not settings.DEBUG:
             self.success_url = '/sberbank.php?path=' + str(form.instance.file) + '&come_back=' + str(self.success_url)
-            form.instance.file = 'import_from_file_sberbank' + form.instance.file[16:]
-            form.save(update_fields=('file',))
+            form.instance.file = 'import_from_file_sberbank' + str(form.instance.file)[16:]
+            form.save()
         return super().form_valid(form)
 
 
