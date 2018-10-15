@@ -79,7 +79,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="{% static '_base/metisMenu.min.js' %}"></script>
   <script src="{% static '_base/sb-admin-2.min.js' %}"></script>
-  {% include 'common/datetimepicker.html' with new_set=True %}
+  {% include '_base/datetimepicker.html' with new_set=True %}
   {% if '/transaction/list_the_edit_mode' in request.get_full_path or '/transaction/new_income_expense_set' in request.get_full_path %}
     {% if not 'comfortable=1' in request.get_full_path %}<link rel="stylesheet" href="{% static 'transaction/compact_for_new_set_and_edit_mode.css' %}?v=1">{% endif %}
   {% endif %}
