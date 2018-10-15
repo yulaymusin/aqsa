@@ -28,7 +28,7 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
 
-  <link href="{% static 'common/aqsa.css' %}?v=1" rel="stylesheet">
+  <link href="{% static 'common/aqsa.css' %}?v=2" rel="stylesheet">
 </head>
 
 <body>
@@ -84,16 +84,15 @@
     {% if not 'comfortable=1' in request.get_full_path %}<link rel="stylesheet" href="{% static 'transaction/compact_for_new_set_and_edit_mode.css' %}?v=1">{% endif %}
   {% endif %}
   {% if '/transaction/' in request.get_full_path or 'wallet_tag_etc/wallet/new' in request.get_full_path or '/report/' in request.get_full_path %}
-    <link href="{% static '_base/chosen_v1.8.5/chosen.min.css' %}" rel="stylesheet">
-    <script src="{% static '_base/chosen_v1.8.5/chosen.jquery.min.js' %}"></script>
-    <script src="{% static '_base/chosen_v1.8.5/init.js' %}"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <script src="{% static '_base/select2.org_init.js' %}?v=1"></script>
   {% endif %}
   {% if '/transaction/list_the_edit_mode' in request.get_full_path %}
     <script src="{% static '_base/bootstrap-notify.min.js' %}"></script>
   {% endif %}
 
 
-  <script src="{% static 'common/aqsa.js' %}?v=1"></script>
   {% if '/transaction/' in request.get_full_path %}
     <link href="{% static 'transaction/aqsa.css' %}?v=1" rel="stylesheet">
     <script src="{% static 'transaction/aqsa.js' %}?v=1"></script>

@@ -40,35 +40,6 @@ table.table td {
 .btn {
   margin: 2px;
 }
-/* <chosen select */
-.chosen-container .chosen-results {
-  min-width: 200px;
-}
-.chosen-container.chosen-with-drop .chosen-drop {
-  min-width: 202px;
-}
-/* </chosen select */
-/* <FIX for chosen-select for show the "required" message from browser. Source: https://github.com/harvesthq/chosen/issues/515#issuecomment-403738593 */
-.form__select {
-  position: relative;
-}
-.form__select .chosen {
-  display: block !important;
-  height: 0 !important;
-
-  position: absolute;
-  left: 15px;
-  bottom: 0;
-
-  outline: none;
-  border-color: white;
-
-  pointer-events: none;
-}
-.has-error a.chosen-single {
-  border-color: #FF4A55;
-}
-/* </FIX for chosen-select for show the "required" message from browser. Source: https://github.com/harvesthq/chosen/issues/515#issuecomment-403738593 */
 /* Descriptions of wallets, contacts */
 .wh-space-pre {
   white-space: pre;
