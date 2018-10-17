@@ -5,4 +5,5 @@ media/
 .idea/
 aqsa_apps/email_host_etc.py
 aqsa_apps/databases.py
+*.mo
 
