@@ -2,7 +2,7 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from aqsa_apps import mixins as mix
 from . import models as m
-from django.utils.translation import ugettext as _
+from django.utils.translation import ugettext_lazy as _
 from django.views.generic.edit import FormView
 from . import forms as f
 

@@ -1,7 +1,7 @@
 # Author of Aqsa: Yulay Musin
 # Sberbank is the main bank of the Russian Federation
 from django import forms
-from django.utils.translation import ugettext as _
+from django.utils.translation import ugettext_lazy as _
 from aqsa_apps.wallet_tag_etc import currencies
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404
@@ -12,29 +12,26 @@ from django.shortcuts import render, redirect
 from django.views.decorators.http import require_POST
 from aqsa_apps.transaction import models as ta_m
 from django.db.transaction import atomic as db_transaction_atomic
-from django.core.urlresolvers import reverse_lazy
-
-
-
 from django.contrib import messages
+from django.core.urlresolvers import reverse_lazy
 
 
 class RubSberbankForm(forms.Form):
     # date
-    date = forms.DateField(input_formats=('%d.%m.%Y',))
+    date = forms.DateField(label=_('Date'), input_formats=('%d.%m.%Y',))
     # done
-    bank_date = forms.DateField(input_formats=('%d.%m.%Y',))
+    bank_date = forms.DateField(label=_('Bank Date'), input_formats=('%d.%m.%Y',))
     # opid
     bank_ta_id = forms.CharField(label=_('Transaction ID'), max_length=20, required=False)
     # summ
     value_in_curr = forms.DecimalField(label=_('Value in currency'), max_digits=14, decimal_places=2)
     # curr
-    currency = forms.ComboField(fields=[forms.ChoiceField(
+    currency = forms.ComboField(label=_('Currency'), fields=[forms.ChoiceField(
         choices=currencies.ISO_4217_CURRENCIES + ((643, 'RUR'),)), forms.IntegerField()], required=False)
     # total
     value = forms.DecimalField(label=_('Value in RUB currency'), max_digits=14, decimal_places=2)
     # text
-    description = forms.CharField(max_length=200, required=False)
+    description = forms.CharField(label=_('Description'), max_length=200, required=False)
 
     def clean(self):
         cd = self.cleaned_data

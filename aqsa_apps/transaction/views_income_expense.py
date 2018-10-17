@@ -5,7 +5,7 @@ from django.views.generic.edit import CreateView, UpdateView
 from . import forms as f
 from . import models as m
 from django.core.urlresolvers import reverse_lazy
-from django.utils.translation import ugettext as _
+from django.utils.translation import ugettext_lazy as _
 
 from django.contrib.auth.decorators import login_required
 from django.forms.models import formset_factory

@@ -7,6 +7,7 @@
   This HTML based on free template from https://mdbootstrap.com/freebies/
 {% endcomment %}
 {% load static from staticfiles %}
+{% load i18n %}
 <html lang="{{ request.LANGUAGE_CODE }}"{% block html_class %}{% endblock html_class %}>
 <head>
   <title>{% block title %}The Aqsa{% endblock title %}</title>
@@ -45,10 +46,10 @@
           <ul class="nav navbar-nav nav-flex-icons ml-auto">
             {# Login / register #}
             {% if '/registration/login' not in request.get_full_path and not user.is_authenticated %}
-            <li class="nav-item" data-toggle="modal" data-target="#modalLoginForm"><a href="#" id="navbar-static-login" class="nav-link waves-effect waves-light"><i class="fa fa-sign-in mr-1"></i><span class="clearfix d-none d-sm-inline-block">Log In</span></a></li>
+            <li class="nav-item" data-toggle="modal" data-target="#modalLoginForm"><a href="#" id="navbar-static-login" class="nav-link waves-effect waves-light"><i class="fa fa-sign-in mr-1"></i><span class="clearfix d-sm-inline-block">{% trans "Log In" %}</span></a></li>
             {% endif %}
             {% if user.is_authenticated %}
-            <li class="nav-item"><a href="{% url 'dashboard:home' %}" class="nav-link waves-effect waves-light"><i class="fa fa-sign-in mr-1"></i><span class="clearfix d-none d-sm-inline-block">Open Dashboard</span></a></li>
+            <li class="nav-item"><a href="{% url 'dashboard:home' %}" class="nav-link waves-effect waves-light"><i class="fa fa-sign-in mr-1"></i><span class="clearfix d-sm-inline-block">{% trans "Open Dashboard" %}</span></a></li>
             {% endif %}
           </ul>
         </div>
@@ -62,13 +63,13 @@
         <div class="container">
           <ul>
             <li>
-              <h1 class="display-3 font-bold wow fadeInDown" data-wow-delay="0.2s">Personal Finance Software</h1>
+              <h1 class="display-3 font-bold wow fadeInDown" data-wow-delay="0.2s">{% trans "Personal Finance Software" %}</h1>
             </li>
             <li>
-              <h4 class="mt-4 mb-5 wow fadeInDown">Aqsa made for help you to calculate your expenses, income and balance</h4>
+              <h4 class="mt-4 mb-5 wow fadeInDown">{% trans "Aqsa made for help you to calculate your expenses, income and balance" %}</h4>
             </li>
             <li>
-              <a href="{% url 'signup' %}" class="btn btn-indigo btn-lg wow fadeInLeft waves-effect waves-light" data-wow-delay="0.2s">Sign up and try Aqsa!</a>
+              <a href="{% url 'signup' %}" class="btn btn-indigo btn-lg wow fadeInLeft waves-effect waves-light" data-wow-delay="0.2s">{% trans "Sign up and try Aqsa!" %}</a>
             </li>
           </ul>
         </div>
@@ -83,7 +84,7 @@
       <h2 class="h2-responsive indigo-text mx-4 font-bold wow fadeIn" data-wow-delay="0.2s">
         <strong>
           
-          {% block h1 %}About Aqsa{% endblock h1 %}
+          {% block h1 %}{% trans "About Aqsa" %}{% endblock h1 %}
           
         </strong>
       </h2>
@@ -106,7 +107,7 @@
       {% block landing_footer %}
       <div class="call-to-action">
         <ul>
-          <li><a href="{% url 'signup' %}" class="btn btn-outline-white waves-effect waves-light" rel="nofollow">Sign up and start to count income and expenses with Aqsa!</a></li>
+          <li><a href="{% url 'signup' %}" class="btn btn-outline-white waves-effect waves-light" rel="nofollow">{% trans "Sign up and start to count income and expenses with Aqsa!" %}</a></li>
         </ul>
       </div>
       {% endblock landing_footer %}
