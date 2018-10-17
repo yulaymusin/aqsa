@@ -1,0 +1,1960 @@
+# TRANSLATION OF AQSA TO RUSSIAN LANGUAGE.
+# Copyright (C) 2018 YULAY MUSIN
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <YULAY.MUSIN@GMAIL.COM>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-17 03:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: YULAY MUSIN <YULAY.MUSIN@GMAIL.COM>\n"
+"Language-Team: \n"
+"Language: RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: aqsa_apps/account/forms.py:11
+msgid "Required. Inform a valid email address."
+msgstr "Обязательно. Сообщите верный email."
+
+#: aqsa_apps/account/forms.py:12 aqsa_apps/account/forms.py:13
+#: aqsa_apps/transaction/forms.py:22 aqsa_apps/transaction/forms.py:23
+#: aqsa_apps/transaction/forms.py:24 aqsa_apps/transaction/forms.py:35
+#: aqsa_apps/transaction/forms.py:36
+msgid "Optional."
+msgstr "Необязательно."
+
+#: aqsa_apps/account/forms.py:34
+msgid "Type your password"
+msgstr "Введите Ваш пароль"
+
+#: aqsa_apps/account/forms.py:36
+msgid "Repeat your password"
+msgstr "Повторите Ваш пароль"
+
+#: aqsa_apps/account/forms.py:39
+msgid "Reason for deletion"
+msgstr "Причина для удаления"
+
+#: aqsa_apps/account/forms.py:39
+msgid "Tell us why do you want to delete your account."
+msgstr "Расскажите, почему Вы хотите удаление аккаунт"
+
+#: aqsa_apps/account/forms.py:42
+msgid "I have back up"
+msgstr "У меня есть бэкап"
+
+#: aqsa_apps/account/forms.py:42
+msgid ""
+"I exported my data from Aqsa and I am sure, I want to delete my account and "
+"all data of my account."
+msgstr ""
+"Я экспортировал мои данные из Aqsa и я уверен, что я хочу удалить мой "
+"аккаунт и все данные моего аккаунта."
+
+#: aqsa_apps/account/forms.py:47
+msgid "You entered different passwords"
+msgstr "Вы ввели разные пароли"
+
+#: aqsa_apps/account/forms.py:53
+msgid "You entered wrong password"
+msgstr "Вы ввели неверный пароль"
+
+#: aqsa_apps/account/models.py:14
+msgid "Language"
+msgstr "Язык"
+
+#: aqsa_apps/account/views_after_login.py:28
+msgid "Your Password Was Changed"
+msgstr "Пароля был изменен"
+
+#: aqsa_apps/account/views_after_login.py:33
+#: aqsa_apps/account/views_after_login.py:34 templates/_base/top_nav.html:18
+msgid "Change Password"
+msgstr "Изменение пароля"
+
+#: aqsa_apps/account/views_after_login.py:48
+msgid "Your Account Was Updated"
+msgstr "Данные аккаунта были обновлены"
+
+#: aqsa_apps/account/views_after_login.py:59
+#: aqsa_apps/account/views_after_login.py:60
+msgid "Update Account"
+msgstr "Обновление аккаунт"
+
+#: aqsa_apps/account/views_after_login.py:71
+#: aqsa_apps/account/views_after_login.py:72
+msgid "Delete Account"
+msgstr "Удаление аккаунта"
+
+#: aqsa_apps/account/views_after_login.py:73
+msgid "This action is irreversible"
+msgstr "Это действие необратимо"
+
+#: aqsa_apps/account/views_after_login.py:81
+msgid "Your account was deleted"
+msgstr "Ваш аккаунт был удален"
+
+#: aqsa_apps/dashboard/views.py:100 templates/_base/sidebar_nav.html:4
+msgid "Dashboard"
+msgstr "Приборная панель"
+
+#: aqsa_apps/export_to_file/views.py:19
+msgid " user"
+msgstr " "
+
+#: aqsa_apps/export_to_file/views.py:21
+msgid "Aqsa - list of wallets of "
+msgstr "Aqsa - список кошельков пользователя "
+
+#: aqsa_apps/export_to_file/views.py:24
+msgid "Aqsa - list of categories of "
+msgstr "Aqsa - список категорий пользователя "
+
+#: aqsa_apps/export_to_file/views.py:27
+msgid "Aqsa - list of tags of "
+msgstr "Aqsa - список тегов пользователя "
+
+#: aqsa_apps/export_to_file/views.py:30
+msgid "Aqsa - list of contacts of "
+msgstr "Aqsa - список контактов пользователя "
+
+#: aqsa_apps/export_to_file/views.py:33
+msgid "Aqsa - list of transactions of "
+msgstr "Aqsa - список транзакций пользователя "
+
+#: aqsa_apps/export_to_file/views.py:36
+msgid "Aqsa - back up of "
+msgstr "Aqsa - бэкап пользователя "
+
+#: aqsa_apps/export_to_file/views.py:41
+msgid "Export data to file"
+msgstr "Экспорт Ваших данных в файл"
+
+#: aqsa_apps/export_to_file/views.py:112
+#: aqsa_apps/export_to_file/viewxins.py:20
+msgid "Could not export your data"
+msgstr "Не удалось экспортировать Ваши данные"
+
+#: aqsa_apps/export_to_file/viewxins.py:57
+msgid "Sorry, something wrong"
+msgstr "Извините, что-то пошло не так"
+
+#: aqsa_apps/export_to_file/viewxins.py:155
+msgid "Sorry, something very bad"
+msgstr "Извините, что-то пошло совсем не так"
+
+#: aqsa_apps/export_to_file/viewxins.py:159
+msgid "Could not export your wallets to CSV file"
+msgstr "Не удалось экспортировать Ваши кошельки в CSV файл"
+
+#: aqsa_apps/export_to_file/viewxins.py:161
+msgid "Could not export your categories to CSV file"
+msgstr "Не удалось экспортировать Ваши категории в CSV файл"
+
+#: aqsa_apps/export_to_file/viewxins.py:163
+msgid "Could not export your tags to CSV file"
+msgstr "Не удалось экспортировать Ваши теги в CSV файл"
+
+#: aqsa_apps/export_to_file/viewxins.py:165
+msgid "Could not export your contacts to CSV file"
+msgstr "Не удалось экспортировать Ваши контакты в CSV файл"
+
+#: aqsa_apps/export_to_file/viewxins.py:167
+msgid "Could not export your transactions to CSV file"
+msgstr "Не удалось экспортировать Ваши транзакции в CSV файл"
+
+#: aqsa_apps/import_from_file/banks/rub_sberbank.py:21
+#: aqsa_apps/import_from_file/models.py:36 aqsa_apps/transaction/models.py:27
+msgid "Date"
+msgstr "Дата"
+
+#: aqsa_apps/import_from_file/banks/rub_sberbank.py:23
+msgid "Bank Date"
+msgstr "Банковская дата"
+
+#: aqsa_apps/import_from_file/banks/rub_sberbank.py:25
+msgid "Transaction ID"
+msgstr "ID транзакции"
+
+#: aqsa_apps/import_from_file/banks/rub_sberbank.py:27
+#: aqsa_apps/transaction/forms.py:74
+msgid "Value in currency"
+msgstr "Значение в валюте"
+
+#: aqsa_apps/import_from_file/banks/rub_sberbank.py:29
+#: aqsa_apps/transaction/forms.py:68 aqsa_apps/transaction/models.py:42
+#: aqsa_apps/wallet_tag_etc/models.py:21
+msgid "Currency"
+msgstr "Валюта"
+
+#: aqsa_apps/import_from_file/banks/rub_sberbank.py:32
+msgid "Value in RUB currency"
+msgstr "Значение в рублях РФ"
+
+#: aqsa_apps/import_from_file/banks/rub_sberbank.py:34
+#: aqsa_apps/transaction/models.py:36 aqsa_apps/wallet_tag_etc/models.py:22
+#: aqsa_apps/wallet_tag_etc/models.py:104
+msgid "Description"
+msgstr "Описание"
+
+#: aqsa_apps/import_from_file/banks/rub_sberbank.py:80
+msgid "File does not contain required columns."
+msgstr "Файл не содержит необходимых колонок."
+
+#: aqsa_apps/import_from_file/banks/rub_sberbank.py:119
+msgid "Sberbank statement"
+msgstr "Выписка Сбербанка"
+
+#: aqsa_apps/import_from_file/banks/rub_sberbank.py:124
+msgid ""
+"After file will be completely imported, you have to correct balance of your "
+"wallet manually"
+msgstr ""
+"После того, как файл будет импортирован, Вам необходимо откорректировать "
+"баланс Вашего кошелька вручную"
+
+#: aqsa_apps/import_from_file/banks/rub_sberbank.py:125
+msgid ""
+"As you can see, Sberbank statement have the IDs of transactions "
+"(\"Transaction ID\" column). At the next, when you will upload a new file, "
+"Aqsa will not add transactions with ID, which already exists in any "
+"transaction of selected wallet. IDs of transactions is the same in every "
+"report, which you can get from Sberbank. But some transactions have an ID, "
+"which equal to 0 and that ID is not unique. Aqsa will check: do you have a "
+"transaction with the same value and with the same bank date and with the ID "
+"equal to 0. If answer is NO, then that transaction will be added. Just do "
+"not edit \"Transaction Date in Bank\" and \"Transaction ID in Bank\" and "
+"transactions will be not duplicated even if you will upload the same "
+"Sberbank statement two or more times."
+msgstr ""
+"Как Вы можете видеть, выписка из Сбербанка содержит идентификаторы (ID) "
+"транзакций (столбец \"ID транзакции\"). В следующий раз, когда Вы будете "
+"загружать новый файл, Aqsa не будет добавлять транзакции с идентификаторами, "
+"которые уже есть в транзакции выбранного кошелька. ID транзакций одинаковы в "
+"каждом отчете, который Вы получаете от Сбербанка. Но некоторые транзакции "
+"имеют ID, который равен 0 и этот ID не уникален. Aqsa будет проверять: "
+"имеется ли у вас транзакциия с таким же значением и с такой же Датой "
+"транзакции в банке и с ID равным 0. Если ответ - НЕТ, тогда транзакция будет "
+"добавлена. Просто не редактируйте \"Дата транзакции в банке\" and \"ID "
+"транзакции в банке\" и транзакции не будут задвоены даже если вы загрузите "
+"одну и ту же Сбербанковскую выписку два или несколько раз."
+
+#: aqsa_apps/import_from_file/banks/rub_sberbank.py:134
+msgid "Confirm to import data"
+msgstr "Подтвердить импорт данных"
+
+#: aqsa_apps/import_from_file/banks/rub_sberbank.py:209
+msgid ""
+"Success. All transactions from your file was added. Your file completely "
+"imported."
+msgstr ""
+"Успех. Все транзакции из Вашего файла были добавлены. Ваш файл успешно "
+"импортирован."
+
+#: aqsa_apps/import_from_file/forms.py:22
+msgid "Choose bank statement."
+msgstr "Выберите банковскую выписку."
+
+#: aqsa_apps/import_from_file/forms.py:23
+msgid "Select wallet, which is related with an uploading bank statement."
+msgstr "Выберите кошелек, который связан с загружаемой банковской выпиской."
+
+#: aqsa_apps/import_from_file/forms.py:24
+msgid "Select bank, which is related with an uploading bank statement."
+msgstr "Выберите банк, который связан с загружаемой банковской выпиской."
+
+#: aqsa_apps/import_from_file/forms.py:33
+msgid "Currency of selected bank and currency of selected wallet is different."
+msgstr "Валюта выбранного банка и валюта выбранного кошелька отличаются."
+
+#: aqsa_apps/import_from_file/forms.py:48
+msgid "Choose a Backup File or CSV."
+msgstr "Выберите бэкап или CSV."
+
+#: aqsa_apps/import_from_file/forms.py:49
+msgid "Specify what kind of file do you want to upload."
+msgstr "Укажите, какой файл Вы хотите загрузить."
+
+#: aqsa_apps/import_from_file/forms.py:116
+msgid "This field should be used only in money transfer transactions"
+msgstr "Это поле должно использоваться только в транзакциях перемещения денег"
+
+#: aqsa_apps/import_from_file/forms.py:127
+msgid "If \"Value\" is bigger than 0, then \"id\" should not be empty."
+msgstr "Если \"Значение\" больше 0, тогда \"id\" не должно быть пустым."
+
+#: aqsa_apps/import_from_file/forms.py:133
+msgid ""
+"If \"Value\" is bigger than 0, then \"transfer_related\" should be empty."
+msgstr ""
+"Если \"Значение\" больше 0, тогда \"transfer_related\" должно быть пустым."
+
+#: aqsa_apps/import_from_file/forms.py:139
+msgid ""
+"If \"Value\" is less than 0, then \"transfer_related\" should not be empty."
+msgstr ""
+"Если \"Значение\" меньше 0, тогда \"transfer_related\" не должно быть пустым."
+
+#: aqsa_apps/import_from_file/forms.py:144
+msgid "This field should be True in money transfer transactions."
+msgstr "Это поле должно быть положительным в транзакциях перемещения денег."
+
+#: aqsa_apps/import_from_file/forms.py:203
+msgid "Date should be the same in both transactions."
+msgstr "Дата должна быть одинаковой в обеих транзакциях."
+
+#: aqsa_apps/import_from_file/forms.py:207
+msgid "Currency should be the same in both transactions."
+msgstr "Валюта должна быть одинаковой в обеих транзакциях."
+
+#: aqsa_apps/import_from_file/forms.py:212
+msgid "Sum of \"Value_in_curr\" both transactions should be equal to 0."
+msgstr "Сумма \"Значений в валюте\" обеих транзакций должна равняться 0."
+
+#: aqsa_apps/import_from_file/forms.py:217
+msgid "Category should be the same in both transactions."
+msgstr "Категория должна быть одинаковой в обеих транзакциях."
+
+#: aqsa_apps/import_from_file/forms.py:221
+msgid "Contact should be the same in both transactions."
+msgstr "Контакт должен быть одинаковым в обеих транзакциях."
+
+#: aqsa_apps/import_from_file/models.py:20
+msgid "Bank Statement"
+msgstr "Банковская выписка"
+
+#: aqsa_apps/import_from_file/models.py:21
+msgid "CSV with Wallets"
+msgstr "CSV с Кошельками"
+
+#: aqsa_apps/import_from_file/models.py:22
+msgid "CSV with Categories"
+msgstr "CSV с Категориями"
+
+#: aqsa_apps/import_from_file/models.py:23
+msgid "CSV with Tags"
+msgstr "CSV с Тегами"
+
+#: aqsa_apps/import_from_file/models.py:24
+msgid "CSV with Contacts"
+msgstr "CSV с Контактами"
+
+#: aqsa_apps/import_from_file/models.py:25
+msgid "CSV with Transactions"
+msgstr "CSV с Транзакциями"
+
+#: aqsa_apps/import_from_file/models.py:26
+msgid "Backup (All in one ZIP)"
+msgstr "Бэкап (Все в одном ZIP)"
+
+#: aqsa_apps/import_from_file/models.py:31
+msgid "Sberbank (Card in Russian Federation ruble currency)"
+msgstr "Сбербанк (Карта в валюте РФ)"
+
+#: aqsa_apps/import_from_file/models.py:38
+msgid "File"
+msgstr "Файл"
+
+#: aqsa_apps/import_from_file/models.py:40
+msgid "Checked"
+msgstr "Проверен"
+
+#: aqsa_apps/import_from_file/models.py:41
+msgid "No error"
+msgstr "Без ошибок"
+
+#: aqsa_apps/import_from_file/models.py:43
+msgid "* Number of imported rows"
+msgstr "* Кол-во импорированных строк"
+
+#: aqsa_apps/import_from_file/models.py:44
+msgid "Import finished successfully"
+msgstr "Импорт успешно завершен"
+
+#: aqsa_apps/import_from_file/models.py:46 aqsa_apps/transaction/models.py:32
+msgid "Wallet"
+msgstr "Кошелек"
+
+#: aqsa_apps/import_from_file/models.py:47
+msgid "Bank"
+msgstr "Банк"
+
+#: aqsa_apps/import_from_file/models.py:49 aqsa_apps/report/models.py:33
+msgid "Variety of uploaded file"
+msgstr "Вариация загружаемого файла"
+
+#: aqsa_apps/import_from_file/models.py:98
+#: aqsa_apps/import_from_file/views_list_upload.py:37
+msgid "Upload Bank Statement"
+msgstr "Загрузить банковскую выписку"
+
+#: aqsa_apps/import_from_file/models.py:100
+msgid "Upload Aqsa-Backup or CSV"
+msgstr "Загрузить Aqsa-бэкап или CSV"
+
+#: aqsa_apps/import_from_file/models.py:102
+msgid "List of Imported Files"
+msgstr "Список импортированных файлов"
+
+#: aqsa_apps/import_from_file/validators.py:12
+#, python-brace-format
+msgid ""
+"Please, upload smaller file. Size of uploading file should be less than {0}"
+msgstr ""
+"Пожалуйста, загрузите файл меньшего размера. Размера загружаемого файла "
+"должен быть меньше {0}"
+
+#: aqsa_apps/import_from_file/validators.py:20
+msgid "Please, upload \".txt\" or \".csv\" or \".zip\" file."
+msgstr "Пожалуйста, загрузите \".txt\" или \".csv\" или \".zip\" файл."
+
+#: aqsa_apps/import_from_file/validators.py:26
+msgid "Only \"+\" and \"-\" symbols can be."
+msgstr "Могут быть только \"+\" and \"-\" знаки"
+
+#: aqsa_apps/import_from_file/views_check_csv_backup.py:24
+msgid "CSV with wallets have been checked"
+msgstr "CSV с кошельками был проверен"
+
+#: aqsa_apps/import_from_file/views_check_csv_backup.py:26
+msgid "Confirm to import wallets"
+msgstr "Подтвердить импорт кошельков"
+
+#: aqsa_apps/import_from_file/views_check_csv_backup.py:41
+msgid "CSV with categories have been checked"
+msgstr "CSV с категориями был проверен"
+
+#: aqsa_apps/import_from_file/views_check_csv_backup.py:43
+msgid "Confirm to import categories"
+msgstr "Подтвердить импорт категорий"
+
+#: aqsa_apps/import_from_file/views_check_csv_backup.py:58
+msgid "CSV with tags have been checked"
+msgstr "CSV с тегами был проверен"
+
+#: aqsa_apps/import_from_file/views_check_csv_backup.py:60
+msgid "Confirm to import tags"
+msgstr "Подтвердить импорт тегов"
+
+#: aqsa_apps/import_from_file/views_check_csv_backup.py:75
+msgid "CSV with contacts have been checked"
+msgstr "CSV с контактами был проверен"
+
+#: aqsa_apps/import_from_file/views_check_csv_backup.py:77
+msgid "Confirm to import contacts"
+msgstr "Подтвердить импорт контактов"
+
+#: aqsa_apps/import_from_file/views_check_csv_backup.py:101
+msgid "CSV with transactions have been checked"
+msgstr "CSV с транзакциями был проверен"
+
+#: aqsa_apps/import_from_file/views_check_csv_backup.py:103
+msgid "Confirm to import transactions"
+msgstr "Подтвердить импорт транзакций"
+
+#: aqsa_apps/import_from_file/views_check_csv_backup.py:141
+msgid "Aqsa-Backup have been checked"
+msgstr "Aqsa-бэкап был проверен"
+
+#: aqsa_apps/import_from_file/views_check_csv_backup.py:143
+msgid "Confirm to import data from Aqsa-Backup"
+msgstr "Подтвердить импорт данных из Aqsa-бэкапа"
+
+#: aqsa_apps/import_from_file/views_db_records_csv_backup.py:18
+msgid "Data from your file was imported."
+msgstr "Данные из Вашего файла были импортированны."
+
+#: aqsa_apps/import_from_file/views_list_upload.py:21
+msgid "My Uploaded Files"
+msgstr "Мои загруженные файлы"
+
+#: aqsa_apps/import_from_file/views_list_upload.py:23
+msgid ""
+"You did not import any file. Click to \"Upload Bank Statement\" or \"Upload "
+"Aqsa-Backup or CSV\" for do that!"
+msgstr ""
+"Вы еще не импортировали ни одного файла. Нажмите на \"Загрузить банковскую "
+"выписку\" или \"Загрузить Aqsa-бэкап или CSV файл\"!"
+
+#: aqsa_apps/import_from_file/views_list_upload.py:25
+msgid ""
+"Actions is not available if file contains any error or file was completely "
+"imported."
+msgstr ""
+"Действия не доступны, если файл содержит ошибку или файл был успешно и "
+"полностью импортирован."
+
+#: aqsa_apps/import_from_file/views_list_upload.py:42
+#: aqsa_apps/import_from_file/views_list_upload.py:72
+msgid "Upload"
+msgstr "Загрузить"
+
+#: aqsa_apps/import_from_file/views_list_upload.py:67
+msgid "Upload Aqsa-backup or CSV file"
+msgstr "Загрузить Aqsa-бэкап или CSV файл"
+
+#: aqsa_apps/import_from_file/views_list_upload.py:86
+msgid "Error! Your file is not the ZIP format file."
+msgstr "Ошибка! Ваш файл не является файлом ZIP формата."
+
+#: aqsa_apps/import_from_file/views_list_upload.py:103
+msgid ""
+"Error! Uploaded ZIP-file is not the back up file of Aqsa because it does not "
+"contain required CSV-files."
+msgstr ""
+"Ошибка! Загруженный ZIP-файл не является Aqsa-бэкапом потому что он не "
+"содержит обязательных CSV-файлов."
+
+#: aqsa_apps/report/forms.py:18 aqsa_apps/report/models.py:42
+msgid "Currency parameter"
+msgstr "Валюта"
+
+#: aqsa_apps/report/forms.py:29 aqsa_apps/transaction/forms.py:60
+msgid "Wallet - #1"
+msgstr "Кошелек - №1"
+
+#: aqsa_apps/report/forms.py:30
+msgid "If you want to choose few wallets, they should be in the same currency."
+msgstr ""
+"Если Вы хотите выбрать несколько кошельков, тогда они должны быть в "
+"одинаковой валюте."
+
+#: aqsa_apps/report/forms.py:38
+msgid "All selected wallets should be in the same currency."
+msgstr "Все выбранные кошельки должны быть в одинаковой валюте."
+
+#: aqsa_apps/report/models.py:16 templates/_base/sidebar_nav.html:14
+msgid "Balance of every Category (Sum Of Transactions), also total balance"
+msgstr ""
+"Баланс каждой категории (сумма значений транзакций), а также общий баланс"
+
+#: aqsa_apps/report/models.py:17 templates/_base/sidebar_nav.html:17
+#: templates/report/read.html:30
+msgid "Sum Of Income"
+msgstr "Сумма доходов"
+
+#: aqsa_apps/report/models.py:18 templates/_base/sidebar_nav.html:20
+#: templates/report/read.html:32
+msgid "Sum Of Expense"
+msgstr "Сумма расходов"
+
+#: aqsa_apps/report/models.py:32
+msgid "Date of create report"
+msgstr "Дата создания отчета"
+
+#: aqsa_apps/report/models.py:36
+msgid "Start Date parameter"
+msgstr "Начальная дата"
+
+#: aqsa_apps/report/models.py:37
+msgid "Finish Date parameter"
+msgstr "Конечная дата"
+
+#: aqsa_apps/report/models.py:38
+msgid "Wallet parameter"
+msgstr "Кошелек"
+
+#: aqsa_apps/report/models.py:44
+msgid "Contact parameter"
+msgstr "Контакт"
+
+#: aqsa_apps/report/models.py:45
+msgid "Exclude Ignored parameter"
+msgstr "Исключить игнорируемые"
+
+#: aqsa_apps/report/models.py:71
+msgid "Create \"Balance of Category\" report"
+msgstr "Создать отчет \"Баланс категорий\""
+
+#: aqsa_apps/report/models.py:73
+msgid "\"Balance of Category\" reports"
+msgstr "Отчеты \"Баланс категорий\""
+
+#: aqsa_apps/report/models.py:77
+msgid "Create \"Sum of Income\" report"
+msgstr "Создать отчет \"Сумма доходов\""
+
+#: aqsa_apps/report/models.py:79
+msgid "\"Sum of Income\" reports"
+msgstr "Отчеты \"Сумма доходов\""
+
+#: aqsa_apps/report/models.py:83
+msgid "Create \"Sum of Expense\" report"
+msgstr "Создать отчет \"Сумма расходов\""
+
+#: aqsa_apps/report/models.py:85
+msgid "\"Sum of Expense\" reports"
+msgstr "Отчеты \"Сумма расходов\""
+
+#: aqsa_apps/report/models.py:101
+msgid "Sum Of \"Values\" (in currency of wallets) of Transactions"
+msgstr "Сумма \"Значений\" (в валюте кошельков) транзакций"
+
+#: aqsa_apps/report/models.py:104
+msgid "Sum Of \"Values in currency\" of Transactions"
+msgstr "Сумма \"Значений в валюте\" транзакций"
+
+#: aqsa_apps/report/models.py:108 aqsa_apps/transaction/forms.py:80
+#: aqsa_apps/transaction/models.py:34 templates/report/read.html:27
+msgid "Category"
+msgstr "Категория"
+
+#: aqsa_apps/report/views_balance_of_category.py:12
+#: aqsa_apps/report/views_sum_of_expense.py:10
+#: aqsa_apps/report/views_sum_of_income.py:10
+msgid "List of created reports - "
+msgstr "Список созданных отчетов - "
+
+#: aqsa_apps/report/viewxins_mixins.py:119
+msgid "List of created reports"
+msgstr "Список созданных отчетов"
+
+#: aqsa_apps/report/viewxins_mixins.py:121
+msgid ""
+"You do not have any report of selected variety. Click to \"New Report\" "
+"button for create it!"
+msgstr ""
+"У вас нет ни одного отчета в выбранном варианте. Нажмите на \"Новый отчет\" "
+"для его создания!"
+
+#: aqsa_apps/report/viewxins_mixins.py:140
+msgid "New Report"
+msgstr "Новый отчет"
+
+#: aqsa_apps/report/viewxins_mixins.py:142
+msgid "Make and show the report!"
+msgstr "Создать и показать отчет!"
+
+#: aqsa_apps/report/viewxins_mixins.py:144
+msgid ""
+"When you create a report, you can specify parameters. Parameters is filters "
+"of your transactions which should be calculated. For example, \"Start Date\" "
+"is filter which will limit calculation result by range of your transactions, "
+"which was happens at the \"Start Date\" or later. Transactions with the "
+"date, before \"Start Date\" will be not calculated."
+msgstr ""
+"Когда Вы создаете отчет, Вы можете указать параметры. Параметры - это "
+"фильтры ваших транзакций, которые должны быть посчитаны. Например, "
+"\"Начальная дата\" это фильтр, которые ограничит вычисляемый результат по "
+"списку Ваших транзакций, которые произошли в \"Начальную дату\" или позже. "
+"Транзакции с датой, ранее \"Начальной дату\" не будут вычисляться."
+
+#: aqsa_apps/transaction/forms.py:19 aqsa_apps/transaction/forms.py:20
+#: aqsa_apps/transaction/forms.py:21
+msgid "Required."
+msgstr "Обязательно."
+
+#: aqsa_apps/transaction/forms.py:26
+msgid ""
+"Optional. Leave empty and transaction will be saved with the currency of "
+"selected wallet."
+msgstr ""
+"Необязательно. Оставьте пустым и транзакции будет сохранена с валютой "
+"выбранного кошелька."
+
+#: aqsa_apps/transaction/forms.py:27
+msgid ""
+"Optional. Leave empty if currency of selected wallet and currency of your "
+"transaction is the same."
+msgstr ""
+"Необязательно. Оставьте пустым, если валюта выбранного кошелька и валюта "
+"Вашей транзакции одинаковые."
+
+#: aqsa_apps/transaction/forms.py:30
+msgid ""
+"Did you gave money to someone or take from somebody? Choose your contact "
+"here."
+msgstr "Вы дали кому-то деньги или взяли у кого-то? Укажите Ваш контакт здесь."
+
+#: aqsa_apps/transaction/forms.py:32
+msgid ""
+"If you will uncheck, then this transaction will be ignored in statistics of "
+"income/expense in dashboard and in the income/expense reports."
+msgstr ""
+"Если Вы снимите эту галочку, тогда эта транзакция будет игнорироваться в "
+"статистике доходов/расходов в приборной панели и в отчетах доходов/расходов."
+
+#: aqsa_apps/transaction/forms.py:48
+msgid "Date of money transfer"
+msgstr "Дата перемещения денег"
+
+#: aqsa_apps/transaction/forms.py:49
+msgid "Required. This date will be saved in both transactions."
+msgstr "Обязательно. Эта дата будет сохранена в обеих транзакциях."
+
+#: aqsa_apps/transaction/forms.py:52
+msgid "Value - #1"
+msgstr "Значение - №1"
+
+#: aqsa_apps/transaction/forms.py:53
+msgid ""
+"Required. How much money goes to the receiving wallet? Fill a positive value."
+msgstr ""
+"Обязательно. Сколько денег поступает на принимающий кошелек? Укадите "
+"положительное значение."
+
+#: aqsa_apps/transaction/forms.py:55
+msgid "Value - #2"
+msgstr "Значение - №2"
+
+#: aqsa_apps/transaction/forms.py:56 aqsa_apps/transaction/formxins.py:149
+msgid ""
+"Required if wallets in different currencies. How much money spend (goes "
+"from) the sending wallet? Fill a negative value."
+msgstr ""
+"Обязательно если кошельки в разной валюте. Сколько денег тратит (уходит с) "
+"отправляющего кошелька? Укажите отрицательное значение."
+
+#: aqsa_apps/transaction/forms.py:61
+msgid "Required. Wallet, which receive the money."
+msgstr "Обязательно. Кошелек, который принимает деньги."
+
+#: aqsa_apps/transaction/forms.py:63
+msgid "Wallet - #2"
+msgstr "Кошелек - №2"
+
+#: aqsa_apps/transaction/forms.py:64
+msgid "Required. Wallet, from which the money goes."
+msgstr "Обязательно. Кошелек, с которого уходят деньги."
+
+#: aqsa_apps/transaction/forms.py:69
+msgid ""
+"Required if wallets in different currencies. Selected currency will be saved "
+"in both transactions."
+msgstr ""
+"Обязательно если кошельки в разной валюте. Выбранная валюта будет сохранена "
+"в обеих транзакциях."
+
+#: aqsa_apps/transaction/forms.py:75
+msgid ""
+"Required if wallets in different currencies. How much money (in selected "
+"currency) do you transfer between wallets? Fill a positive value."
+msgstr ""
+"Обязательно если кошельки в разной валюте. Сколько денег (в выбранной "
+"валюте) Вы перемещаете между кошельками? Укажите положительное значение."
+
+#: aqsa_apps/transaction/forms.py:81
+msgid "Optional. Selected category will be saved in both transactions."
+msgstr ""
+"Необязательно. Выбранная категория будет сохранена в обеих транзакциях."
+
+#: aqsa_apps/transaction/forms.py:84
+msgid "Description - #1"
+msgstr "Описание - №1"
+
+#: aqsa_apps/transaction/forms.py:85
+msgid ""
+"Optional. Description of the transaction that replenishes the receiving "
+"wallet."
+msgstr ""
+"Необязательно. Описание для транзакции, которая пополняет принимающий "
+"кошелек."
+
+#: aqsa_apps/transaction/forms.py:87
+msgid "Description - #2"
+msgstr "Описание - №2"
+
+#: aqsa_apps/transaction/forms.py:88
+msgid ""
+"Optional. Description of the transaction that withdraws money from the "
+"sending wallet."
+msgstr ""
+"Необязательно. Описание для транзакции, которая убавляет деньги на "
+"отправляющем кошельке."
+
+#: aqsa_apps/transaction/forms.py:91
+msgid "Tag - #1"
+msgstr "Теги - №1"
+
+#: aqsa_apps/transaction/forms.py:92
+msgid ""
+"Optional. Tags for the transaction that replenishes the receiving wallet."
+msgstr ""
+"Необязательно. Теги для транзакции, которая пополняет принимающий кошелек."
+
+#: aqsa_apps/transaction/forms.py:94
+msgid "Tag - #2"
+msgstr "Теги - №2"
+
+#: aqsa_apps/transaction/forms.py:95
+msgid ""
+"Optional. Tags for the transaction that withdraws money from the sending "
+"wallet."
+msgstr ""
+"Необязательно. Теги для транзакции, которая убавляет деньги на отправляющем "
+"кошельке."
+
+#: aqsa_apps/transaction/forms.py:99 aqsa_apps/transaction/models.py:49
+msgid "Contact"
+msgstr "Контакт"
+
+#: aqsa_apps/transaction/forms.py:100
+msgid "Optional. Selected contact will be saved in both transactions."
+msgstr "Необязательно. Выбранный контакт будет сохранен в обеих транзакциях."
+
+#: aqsa_apps/transaction/forms.py:103
+msgid "Transaction Date in Bank - #1"
+msgstr "Дата транзакции в банке - #1"
+
+#: aqsa_apps/transaction/forms.py:104
+msgid "Optional. Date of the transaction in the bank that takes the money."
+msgstr "Необязательно. Дата транзакции в банке, который принимает деньги."
+
+#: aqsa_apps/transaction/forms.py:106
+msgid "Transaction Date in Bank - #2"
+msgstr "Дата транзакции в банке - #2"
+
+#: aqsa_apps/transaction/forms.py:107
+msgid "Optional. Date of the transaction in the bank that sends the money."
+msgstr "Необязательно. Дата транзакции в банке, который отправляет деньги."
+
+#: aqsa_apps/transaction/forms.py:110
+msgid "Transaction ID in Bank - #1"
+msgstr "ID транзакции в банке - №1"
+
+#: aqsa_apps/transaction/forms.py:111
+msgid "Optional. ID of the transaction in the bank that takes the money."
+msgstr "Необязательно. ID транзакции в банке, который принимает деньги."
+
+#: aqsa_apps/transaction/forms.py:113
+msgid "Transaction ID in Bank - #2"
+msgstr "ID транзакции в банке - №2"
+
+#: aqsa_apps/transaction/forms.py:114
+msgid "Optional. ID of the transaction in the bank that sends the money."
+msgstr "Необязательно. ID транзакции в банке, который отправляет деньги."
+
+#: aqsa_apps/transaction/formxins.py:30
+msgid ""
+"\"Value\" and \"Value in currency\" is different, but selected currency and "
+"currency of selected wallet is the same. Fill right \"Value in currency\" or "
+"leave empty that field, or select right \"Currency\"."
+msgstr ""
+"\"Значение\" и \"Значение в валюте\" - разные, но выбранная валюта и валюты "
+"выбранных кошельков одинаковые. Укажите верное \"Значение в валюте\" или "
+"оставьте это поле пустым, или укажите верную \"Валюту\"."
+
+#: aqsa_apps/transaction/formxins.py:44
+msgid ""
+"If you fill \"Value in currency\" (different from the \"Value\"), then "
+"choose a currency."
+msgstr ""
+"Если Вы заполняете \"Значение в валюте\" (отличное от \"Значения\"), тогда "
+"укажите валюту."
+
+#: aqsa_apps/transaction/formxins.py:55
+msgid ""
+"Value and Value in currency, both, should be positive (your income) or "
+"negative (your expense)."
+msgstr ""
+"Значение и Значение в валюте, оба, должны быть положительными (Ваш доход) "
+"или отрицательными (Ваш расход)."
+
+#: aqsa_apps/transaction/formxins.py:68
+msgid ""
+"Value and Value in currency, both, should be positive (your income) or "
+"negative (your expense) or both equal to 0."
+msgstr ""
+"Значение и Значение в валюте, оба, должны быть положительными (Ваш доход) "
+"или отрицательными (Ваш расход) или оба должны быть равны 0."
+
+#: aqsa_apps/transaction/formxins.py:81
+msgid ""
+"If currency of your transaction and currency of selected wallet is "
+"different, then provide a value in selected currency."
+msgstr ""
+"Если валюта Вашей транзакции и валюта выбранного кошелька - разные, тогда "
+"укажите значение в выбранной валюте."
+
+#: aqsa_apps/transaction/formxins.py:161
+msgid "Required if wallets in different currencies. Select \"Currency\"."
+msgstr "Обязательно, если кошельки в разных валютах. Выберите \"Валюту\"."
+
+#: aqsa_apps/transaction/formxins.py:172
+msgid ""
+"Required if wallets in different currencies. Fill \"Value in currency\"."
+msgstr ""
+"Обязательно, если кошельки в разных валютах. Заполните \"Значение в валюте\"."
+
+#: aqsa_apps/transaction/formxins.py:183
+msgid "#1 - should be positive value (bigger than 0)."
+msgstr "№1 - должно быть положительное значение (больше 0)."
+
+#: aqsa_apps/transaction/formxins.py:193
+msgid "#2 - should be negative value (less than 0)."
+msgstr "№2 - должно быть отрицательное значение (меньше 0)."
+
+#: aqsa_apps/transaction/formxins.py:203
+msgid "Should be positive (bigger than 0)."
+msgstr "Должно быть положительное значение (больше 0)."
+
+#: aqsa_apps/transaction/formxins.py:213
+msgid "Do not transfer from and to the same wallet."
+msgstr "Не перемещайте деньги с и на один и тот же кошелек."
+
+#: aqsa_apps/transaction/formxins.py:224
+msgid ""
+"When you transfer money between wallets in the same currency, sum of \"Value "
+"#1\" and \"Value #2\" should be equal to 0 (\"Value #2\" should be same with "
+"\"Value #1\", except that \"Value #1\" is positive and \"Value #2\" is "
+"negative). If you have a bank commission for transfer money, then make a "
+"\"New Income or Expense\" transaction for record that."
+msgstr ""
+"Когда Вы перемещаете деньги между кошельками с одинаковой валютой, сумма "
+"\"Значения №1\" и \"Значение №2\" должны быть равны 0 (\"Значение №2\" "
+"должно быть одинаковым со \"Значением №1\"), кроме того, что \"Значение №1\" "
+"должно быть положительным, а \"Значение №2\" должно быть отрицательным). "
+"Если у Вас есть банковская комиссия для перемещения денег, тогда создайте "
+"транзакцию с помощью \"Новый доход или расход\" для учета комиссии."
+
+#: aqsa_apps/transaction/formxins.py:240
+msgid ""
+"When you transfer money between wallets in the same currency, \"Value #1\" "
+"and \"Value in currency\" should be the same. If you have a bank commission "
+"for transfer money, then make a \"New Income or Expense\" transaction for "
+"record that."
+msgstr ""
+"Когда Вы перемещаете деньги между кошельками с одинаковой валютой, "
+"\"Значение №1\" и \"Значение в валюте\" должны быть одинаковыми. Если у Вас "
+"есть банковская комиссия для перемещения денег, тогда создайте транзакцию с "
+"помощью \"Новый доход или расход\" для учета комиссии."
+
+#: aqsa_apps/transaction/formxins.py:255
+msgid ""
+"When you transfer money between wallets in the same currency, \"Currency\" "
+"should be the same."
+msgstr ""
+"Когда Вы перемещаете деньги между кошельками с одинаковой валютой, \"Валюта"
+"\" также должна быть одинаковой."
+
+#: aqsa_apps/transaction/formxins.py:267
+msgid ""
+"\"Value #1\" not equal to \"Value in currency\" even currency of \"Wallet "
+"#1\" same with selected \"Currency\". If you have a bank commission for "
+"transfer money, then make a \"New Income or Expense\" transaction for record "
+"that."
+msgstr ""
+"\"Значение №1\" не равняется \"Значению в валюте\", но валюта \"Кошелька "
+"№1\" одинаковая с выбранной \"Валютой\". Если у Вас есть банковская комиссия "
+"для перемещения денег, тогда создайте транзакцию с помощью \"Новый доход или "
+"расход\" для учета комиссии."
+
+#: aqsa_apps/transaction/formxins.py:281
+msgid ""
+"Sum of \"Value #2\" and \"Value in currency\" not equal to 0 even currency "
+"of \"Wallet #2\" same with selected \"Currency\". If you have a bank "
+"commission for transfer money, then make a \"New Income or Expense\" "
+"transaction for record that."
+msgstr ""
+"Сумма \"Значения №2\" и \"Значения в валюте\" не равняются 0, но валюта "
+"\"Кошелька №2\" одинаковая с выбранной \"Валютой\". Если у Вас есть "
+"банковская комиссия для перемещения денег, тогда создайте транзакцию с "
+"помощью \"Новый доход или расход\" для учета комиссии."
+
+#: aqsa_apps/transaction/models.py:23
+msgid "Transfer or Income or Expense"
+msgstr "Перемещение или доход или расход"
+
+#: aqsa_apps/transaction/models.py:30
+msgid "Value"
+msgstr "Значение"
+
+#: aqsa_apps/transaction/models.py:38
+msgid "Tag"
+msgstr "Тег"
+
+#: aqsa_apps/transaction/models.py:46
+msgid "Value in Currency"
+msgstr "Значение в валюте"
+
+#: aqsa_apps/transaction/models.py:54
+msgid "Do not ignore in statistics and reports"
+msgstr "Не игнорировать в статистике и в отчетах"
+
+#: aqsa_apps/transaction/models.py:59
+msgid "Transaction Date in Bank"
+msgstr "Дата транзакции в банке"
+
+#: aqsa_apps/transaction/models.py:63
+msgid "Transaction ID in Bank"
+msgstr "ID транзакций в банке"
+
+#: aqsa_apps/transaction/models.py:91
+msgid "List of transactions"
+msgstr "Список транзакций"
+
+#: aqsa_apps/transaction/models.py:92
+msgid "Search using filter"
+msgstr "Поиск с фильтрами"
+
+#: aqsa_apps/transaction/models.py:93
+msgid "Edit Mode"
+msgstr "Режим правки"
+
+#: aqsa_apps/transaction/models.py:94
+msgid "New Income or Expense"
+msgstr "Новый доход или расход"
+
+#: aqsa_apps/transaction/models.py:96
+msgid "New Transfer"
+msgstr "Новое перемещение"
+
+#: aqsa_apps/transaction/models.py:97
+#: aqsa_apps/transaction/views_income_expense.py:80
+msgid "New Set (Income or Expense)"
+msgstr "Новые транзакции (доход или расход)"
+
+#: aqsa_apps/transaction/views_ajax.py:26
+msgid "The transaction has been updated successfully"
+msgstr "Транзакция была успешно обновлена."
+
+#: aqsa_apps/transaction/views_ajax.py:41
+msgid "The transaction has not been updated because of errors"
+msgstr "Транзакция не была обновлена из-за ошибок"
+
+#: aqsa_apps/transaction/views_income_expense.py:30
+msgid "Transaction have been created."
+msgstr "Транзакция была создана."
+
+#: aqsa_apps/transaction/views_income_expense.py:33
+msgid "New Transaction (Income or Expense)"
+msgstr "Новая транзакция (доход или расход)"
+
+#: aqsa_apps/transaction/views_income_expense.py:34
+#: aqsa_apps/transaction/views_income_expense.py:137
+#: aqsa_apps/transaction/views_transfer.py:25
+#: aqsa_apps/transaction/views_transfer.py:92
+#: aqsa_apps/wallet_tag_etc/viewxins_mixins.py:28
+#: aqsa_apps/wallet_tag_etc/viewxins_mixins.py:41
+msgid "Save"
+msgstr "Сохранить"
+
+#: aqsa_apps/transaction/views_income_expense.py:35
+#: aqsa_apps/transaction/views_transfer.py:26
+#: aqsa_apps/wallet_tag_etc/viewxins_mixins.py:29
+msgid "Save and add another"
+msgstr "Сохранить и создать еще"
+
+#: aqsa_apps/transaction/views_income_expense.py:75
+msgid "Transactions have been created."
+msgstr "Транзакции были созданы."
+
+#: aqsa_apps/transaction/views_income_expense.py:102
+msgid "The transaction was copied."
+msgstr "Транзакции была скопирована"
+
+#: aqsa_apps/transaction/views_income_expense.py:108
+msgid "Make copy of existing transaction"
+msgstr "Создание копии существующей транзакции"
+
+#: aqsa_apps/transaction/views_income_expense.py:109
+msgid "Are you sure you want to make a copy of the following transaction?"
+msgstr "Вы уверены, что хотите создать копию транзакции, показанной ниже?"
+
+#: aqsa_apps/transaction/views_income_expense.py:110
+msgid "Make copy"
+msgstr "Создать копию"
+
+#: aqsa_apps/transaction/views_income_expense.py:133
+msgid "The transaction was updated."
+msgstr "Транзакция была обновлена."
+
+#: aqsa_apps/transaction/views_income_expense.py:136
+msgid "Edit Transaction (Income or Expense)"
+msgstr "Редактирование транзакции (доход или расход)"
+
+#: aqsa_apps/transaction/views_income_expense.py:138
+#: aqsa_apps/transaction/views_transfer.py:93
+#: aqsa_apps/wallet_tag_etc/viewxins_mixins.py:42
+msgid "Save and continue editing"
+msgstr "Сохранить и продолжить редактирование"
+
+#: aqsa_apps/transaction/views_income_expense.py:164
+msgid "The transaction was deleted."
+msgstr "Транзакции была удалена."
+
+#: aqsa_apps/transaction/views_income_expense.py:166
+msgid "Delete Transaction"
+msgstr "Удаление транзакции"
+
+#: aqsa_apps/transaction/views_income_expense.py:167
+msgid "Are you sure you want to delete the transaction shown below?"
+msgstr "Вы уверены, что хотите удалить транзакции, показанные ниже?"
+
+#: aqsa_apps/transaction/views_income_expense.py:168
+#: aqsa_apps/transaction/views_transfer.py:244
+#: aqsa_apps/wallet_tag_etc/viewxins_mixins.py:62
+msgid "Yes, I am sure. Delete it!"
+msgstr "Да, я уверен. Удалить это!"
+
+#: aqsa_apps/transaction/views_lists.py:16
+msgid "My Transactions"
+msgstr "Мои транзакции"
+
+#: aqsa_apps/transaction/views_lists.py:24
+msgid ""
+"You do not have any transaction. Click to one of \"New...\" button for "
+"create it!"
+msgstr ""
+"У вас нет ни одной транзакции. Нажмите на одну из \"Новых\" кнопок для ее "
+"создания!"
+
+#: aqsa_apps/transaction/views_lists.py:56
+msgid "Search Transactions"
+msgstr "Поиск транзакций"
+
+#: aqsa_apps/transaction/views_lists.py:58
+msgid "Nothing found by applied filters"
+msgstr "Ничего не найдено с примененными фильтрами"
+
+#: aqsa_apps/transaction/views_lists.py:137
+msgid "Edit Transactions"
+msgstr "Редактировать транзакции"
+
+#: aqsa_apps/transaction/views_transfer.py:21
+msgid "New Transactions (Pair of Money Transfer)"
+msgstr "Новые транзакции (пара перемещения денег)"
+
+#: aqsa_apps/transaction/views_transfer.py:22
+msgid ""
+"This form will create two transactions. #1 - fill positive value and choose "
+"wallet to which receive the money, #2 - fill negative value and choose "
+"wallet from which the money goes"
+msgstr ""
+"Эта форма создат две транзакции. №1 - укажите положительное значение и "
+"выберите кошелек на который поступают деньги, №2 - укажите отрицательное "
+"значение и выберите кошелек, с которого уходят деньги"
+
+#: aqsa_apps/transaction/views_transfer.py:83
+msgid "Transactions (Pair of Money Transfer) have been created."
+msgstr "Транзакции (пара перемещения денег) были созданы."
+
+#: aqsa_apps/transaction/views_transfer.py:91
+msgid "Edit Transactions (Pair of Money Transfer)"
+msgstr "Редактирование транзакций (пары перемещения денег)"
+
+#: aqsa_apps/transaction/views_transfer.py:209
+msgid "Transactions (Pair of Money Transfer) was updated."
+msgstr "Транзакции (пара перемещения денег) были обновлены."
+
+#: aqsa_apps/transaction/views_transfer.py:236
+msgid "Transactions (Pair of Money Transfer) was deleted."
+msgstr "Транзакции (пара перемещения денег) были удалены."
+
+#: aqsa_apps/transaction/views_transfer.py:242
+msgid "Delete Transactions (Pair of Money Transfer)"
+msgstr "Удаление транзакций (пары перемещения денег)"
+
+#: aqsa_apps/transaction/views_transfer.py:243
+msgid "Are you sure you want to delete the transactions shown below?"
+msgstr "Вы уверены, что хотите удалить транзакции, показанные ниже?"
+
+#: aqsa_apps/wallet_tag_etc/models.py:20 aqsa_apps/wallet_tag_etc/models.py:51
+#: aqsa_apps/wallet_tag_etc/models.py:77 aqsa_apps/wallet_tag_etc/models.py:103
+msgid "Name"
+msgstr "Название"
+
+#: aqsa_apps/wallet_tag_etc/models.py:37
+#: aqsa_apps/wallet_tag_etc/views_wallet.py:28
+msgid "New Wallet"
+msgstr "Новый кошелек"
+
+#: aqsa_apps/wallet_tag_etc/models.py:38
+msgid "List of Wallets"
+msgstr "Список кошельков"
+
+#: aqsa_apps/wallet_tag_etc/models.py:63
+#: aqsa_apps/wallet_tag_etc/views_category.py:28
+msgid "New Category"
+msgstr "Новая категория"
+
+#: aqsa_apps/wallet_tag_etc/models.py:64
+msgid "List of Categories"
+msgstr "Список категорий"
+
+#: aqsa_apps/wallet_tag_etc/models.py:89
+#: aqsa_apps/wallet_tag_etc/views_tag.py:28
+msgid "New Tag"
+msgstr "Новый тег"
+
+#: aqsa_apps/wallet_tag_etc/models.py:90
+msgid "List of Tags"
+msgstr "Список тегов"
+
+#: aqsa_apps/wallet_tag_etc/models.py:116
+#: aqsa_apps/wallet_tag_etc/views_contact.py:28
+msgid "New Contact"
+msgstr "Новый контакт"
+
+#: aqsa_apps/wallet_tag_etc/models.py:117
+msgid "List of Contacts"
+msgstr "Список контактов"
+
+#: aqsa_apps/wallet_tag_etc/validators.py:9
+msgid "Two or more spaces not allowed"
+msgstr "Два или более пробелов не разрешено"
+
+#: aqsa_apps/wallet_tag_etc/validators.py:15
+msgid "Please, do not include \";\" reserved symbol to name of tag."
+msgstr ""
+"Пожалуйста, не используйте в имени тега \";\" зарезервированный символ."
+
+#: aqsa_apps/wallet_tag_etc/views_category.py:12
+#: templates/_base/sidebar_nav.html:26
+msgid "Categories"
+msgstr "Категории"
+
+#: aqsa_apps/wallet_tag_etc/views_category.py:13
+msgid ""
+"You do not have any category. Click to \"New Category\" button for create it!"
+msgstr ""
+"У вас нет ни одной категории. Нажмите на \"Новая категория\" для ее создания!"
+
+#: aqsa_apps/wallet_tag_etc/views_category.py:24
+msgid "Category have been created."
+msgstr "Категория была создана."
+
+#: aqsa_apps/wallet_tag_etc/views_category.py:25
+msgid ""
+"You already have a category with the same name. Do not get confused in the "
+"future, type another name"
+msgstr ""
+"У вас уже есть категория с таким названием. Чтобы не запутаться в будущем, "
+"напишите другое название"
+
+#: aqsa_apps/wallet_tag_etc/views_category.py:35
+msgid "The category was updated."
+msgstr "Категория была обновлена."
+
+#: aqsa_apps/wallet_tag_etc/views_category.py:37
+msgid "Edit Category"
+msgstr "Редактировать категорию"
+
+#: aqsa_apps/wallet_tag_etc/views_category.py:43
+msgid "The category was deleted."
+msgstr "Категория был удалена."
+
+#: aqsa_apps/wallet_tag_etc/views_category.py:44
+msgid ""
+"Could not delete this category because one or more of your transactions "
+"linked to this category. Use filter in the list of transactions for find it!"
+msgstr ""
+"Не удалось удалить эту категорию потому что одна или несколько Ваших "
+"транзакций связаны с этой категорией. Используйте фильтр в списке транзакций "
+"чтобы найти эти транзакции!"
+
+#: aqsa_apps/wallet_tag_etc/views_category.py:47
+msgid "Delete Category"
+msgstr "Удаление категории"
+
+#: aqsa_apps/wallet_tag_etc/views_category.py:48
+msgid "Are you sure you want to delete the category shown below?"
+msgstr "Вы уверены, что хотите удалить категорию, показанную ниже?"
+
+#: aqsa_apps/wallet_tag_etc/views_contact.py:12
+msgid "My Contacts"
+msgstr "Мои контакты"
+
+#: aqsa_apps/wallet_tag_etc/views_contact.py:13
+msgid ""
+"You do not have any contact. Click to \"New Contact\" button for create it!"
+msgstr ""
+"У вас нет ни одного контакта. Нажмите на \"Новый контакт\" для его создания!"
+
+#: aqsa_apps/wallet_tag_etc/views_contact.py:24
+msgid "Contact have been created."
+msgstr "Контакт был создан."
+
+#: aqsa_apps/wallet_tag_etc/views_contact.py:25
+msgid ""
+"You already have a contact with the same name. Do not get confused in the "
+"future, type another name"
+msgstr ""
+"У вас уже есть контакт с таким названием. Чтобы не запутаться в будущем, "
+"напишите другое название"
+
+#: aqsa_apps/wallet_tag_etc/views_contact.py:35
+msgid "The contact was updated."
+msgstr "Контакт был обновлен."
+
+#: aqsa_apps/wallet_tag_etc/views_contact.py:37
+msgid "Edit Contact"
+msgstr "Редактировать контакт"
+
+#: aqsa_apps/wallet_tag_etc/views_contact.py:43
+msgid "The contact was deleted."
+msgstr "Контакт был удален."
+
+#: aqsa_apps/wallet_tag_etc/views_contact.py:44
+msgid ""
+"Could not delete this contact because one or more of your transactions "
+"linked to this contact. Use filter in the list of transactions for find it!"
+msgstr ""
+"Не удалось удалить этот контакт потому что одна или несколько Ваших "
+"транзакций связаны с этим контактом. Используйте фильтр в списке транзакций "
+"чтобы найти эти транзакции!"
+
+#: aqsa_apps/wallet_tag_etc/views_contact.py:47
+msgid "Delete Contact"
+msgstr "Удаление контакта"
+
+#: aqsa_apps/wallet_tag_etc/views_contact.py:48
+msgid "Are you sure you want to delete the contact shown below?"
+msgstr "Вы уверены, что хотите удалить контакт, показанный ниже?"
+
+#: aqsa_apps/wallet_tag_etc/views_tag.py:12 templates/_base/sidebar_nav.html:29
+msgid "Tags"
+msgstr "Теги"
+
+#: aqsa_apps/wallet_tag_etc/views_tag.py:13
+msgid "You do not have any tag. Click to \"New Tag\" button for create it!"
+msgstr "У вас нет ни одного тега. Нажмите на \"Новый тег\" для его создания!"
+
+#: aqsa_apps/wallet_tag_etc/views_tag.py:24
+msgid "Tag have been created."
+msgstr "Тег был создан."
+
+#: aqsa_apps/wallet_tag_etc/views_tag.py:25
+msgid ""
+"You already have a tag with the same name. Do not get confused in the "
+"future, type another name"
+msgstr ""
+"У вас уже есть тег с таким названием. Чтобы не запутаться в будущем, "
+"напишите другое название"
+
+#: aqsa_apps/wallet_tag_etc/views_tag.py:35
+msgid "The tag was updated."
+msgstr "Тег был обновлен."
+
+#: aqsa_apps/wallet_tag_etc/views_tag.py:37
+msgid "Edit Tag"
+msgstr "Редактировать тег"
+
+#: aqsa_apps/wallet_tag_etc/views_tag.py:43
+msgid "The tag was deleted."
+msgstr "Тег был удален."
+
+#: aqsa_apps/wallet_tag_etc/views_tag.py:45
+msgid "Delete Tag"
+msgstr "Удаление тега"
+
+#: aqsa_apps/wallet_tag_etc/views_tag.py:46
+msgid "Are you sure you want to delete the tag shown below?"
+msgstr "Вы уверены, что хотите удалить тег, показанный ниже?"
+
+#: aqsa_apps/wallet_tag_etc/views_wallet.py:12
+msgid "My Wallets"
+msgstr "Мои кошельки"
+
+#: aqsa_apps/wallet_tag_etc/views_wallet.py:13
+msgid ""
+"You do not have any wallet. Click to \"New Wallet\" button for create it!"
+msgstr ""
+"У вас нет ни одного кошелька. Нажмите на \"Новый кошелек\" для его создания!"
+
+#: aqsa_apps/wallet_tag_etc/views_wallet.py:24
+msgid "Wallet have been created."
+msgstr "Кошелек был создан."
+
+#: aqsa_apps/wallet_tag_etc/views_wallet.py:25
+msgid ""
+"You already have a wallet with the same name. Do not get confused in the "
+"future, type another name"
+msgstr ""
+"У вас уже есть кошелек с таким названием. Чтобы не запутаться в будущем, "
+"напишите другое название"
+
+#: aqsa_apps/wallet_tag_etc/views_wallet.py:35
+msgid "The wallet was updated."
+msgstr "Кошелек был обновлен."
+
+#: aqsa_apps/wallet_tag_etc/views_wallet.py:37
+msgid "Edit Wallet"
+msgstr "Редактировать кошелек"
+
+#: aqsa_apps/wallet_tag_etc/views_wallet.py:43
+msgid "The wallet was deleted."
+msgstr "Кошелек был удален."
+
+#: aqsa_apps/wallet_tag_etc/views_wallet.py:44
+msgid ""
+"Could not delete this wallet because one or more of your transactions linked "
+"to this wallet. Use filter in the list of transactions for find it!"
+msgstr ""
+"Не удалось удалить этот кошелек потому что одна или несколько Ваших "
+"транзакций связаны с этим кошельком. Используйте фильтр в списке транзакций "
+"чтобы найти эти транзакции!"
+
+#: aqsa_apps/wallet_tag_etc/views_wallet.py:47
+msgid "Delete Wallet"
+msgstr "Удаление кошелька"
+
+#: aqsa_apps/wallet_tag_etc/views_wallet.py:48
+msgid "Are you sure you want to delete the wallet shown below?"
+msgstr "Вы уверены, что хотите удалить кошелек, показанный ниже?"
+
+#: templates/_base/base_of_landing_page.html:50
+#: templates/registration/include_login_register.html:35
+#: templates/registration/login.html:5 templates/registration/login.html:7
+#: templates/registration/login.html:33
+msgid "Log In"
+msgstr "Войти"
+
+#: templates/_base/base_of_landing_page.html:53
+msgid "Open Dashboard"
+msgstr "Открыть приборную панель"
+
+#: templates/_base/base_of_landing_page.html:67
+msgid "Personal Finance Software"
+msgstr "Веб-программа для учета личных финансов"
+
+#: templates/_base/base_of_landing_page.html:70
+msgid "Aqsa made for help you to calculate your expenses, income and balance"
+msgstr "Aqsa создана чтобы помочь Вам считать Ваши расходы, доходы и баланс"
+
+#: templates/_base/base_of_landing_page.html:73
+msgid "Sign up and try Aqsa!"
+msgstr "Зарегистрироваться и попробовать Aqsa"
+
+#: templates/_base/base_of_landing_page.html:88
+msgid "About Aqsa"
+msgstr "Об Aqsa"
+
+#: templates/_base/base_of_landing_page.html:111
+msgid "Sign up and start to count income and expenses with Aqsa!"
+msgstr "Зарегистрироваться и начать считать доходы и расходы с Aqsa!"
+
+#: templates/_base/sidebar_nav.html:7
+msgid "Transactions"
+msgstr "Транзакции"
+
+#: templates/_base/sidebar_nav.html:10
+msgid "Reports"
+msgstr "Отчеты"
+
+#: templates/_base/sidebar_nav.html:32
+msgid "Wallets"
+msgstr "Кошельки"
+
+#: templates/_base/sidebar_nav.html:35
+msgid "Contacts"
+msgstr "Контакты"
+
+#: templates/_base/sidebar_nav.html:38
+msgid "Import from file"
+msgstr "Импорт из файла"
+
+#: templates/_base/sidebar_nav.html:41
+msgid "Export to file"
+msgstr "Экспорт в файл"
+
+#: templates/_base/top_nav.html:19
+msgid "My Settings"
+msgstr "Мои настройки"
+
+#: templates/_base/top_nav.html:20
+msgid "Delete My Account"
+msgstr "Удалить мой аккаунт"
+
+#: templates/_base/top_nav.html:22
+msgid "Log out"
+msgstr "Выйти"
+
+#: templates/about/homepage.html:8
+msgid ""
+"\n"
+"    <p>Aqsa is simple, but free software which have some powerful "
+"functionality even compare some commercial software.</p>\n"
+"  "
+msgstr ""
+"\n"
+"    <p>Aqsa - простая, но бесплатная веб-программа, которая имеет некоторые "
+"мощные и полезные функции даже в сравнении с платными программами.</p>\n"
+"  "
+
+#: templates/about/homepage.html:15
+msgid "Best features"
+msgstr "Особенные возможности"
+
+#: templates/about/homepage.html:22
+msgid "Save your time and import statement from your bank"
+msgstr "Сэкономьте Ваше время и импортируйте банковскую выписку Вашего банка"
+
+#: templates/about/homepage.html:24
+msgid ""
+"Just few clicks for import statement from your bank and make sum of income/"
+"expense reports."
+msgstr ""
+"Всего несколько нажатий чтобы импортировать выписку Вашего банка и создать "
+"отчет по доходам/расходам."
+
+#: templates/about/homepage.html:24
+msgid "Available bank at this time is only Sberbank."
+msgstr "Доступным банком, в настоящее время, является только Сбербанк."
+
+#: templates/about/homepage.html:31
+msgid "Want to categorize your income and expenses?"
+msgstr "Хотите классифицировать доходы и расходы?"
+
+#: templates/about/homepage.html:33
+msgid ""
+"The edit mode will save your time for categorize your income and expenses. "
+"Very easy."
+msgstr ""
+"Режим правки сэкономит Ваше время для классификации доходов и расходов. Это "
+"очень просто.<br><br>"
+
+#: templates/about/homepage.html:33
+msgid ""
+"You can use tags and categories. Categories will allow you to make a report "
+"of income/expense balance by category."
+msgstr ""
+"Можно использовать теги и категории. Категории позволят создавать балансовые "
+"отчеты по категориям."
+
+#: templates/about/homepage.html:40
+msgid "Export/Import your data to/from CSV or back up file"
+msgstr "Экспорт/Импорт Ваших данных в/из CSV- или бэкап-файла"
+
+#: templates/about/homepage.html:42
+msgid ""
+"Do not worry about to make mistakes when you add/remove transactions. Keep "
+"your data just in case making back up files and easily import them to new "
+"account."
+msgstr ""
+"Не бойтесь ошибится при добавлении/удалении транзакций. Держите все Ваши "
+"данные у себя на всякий случай, сохраняя себе бэкап-файлы, которыелегко "
+"можно импортировать в новый аккаунт.<br>"
+
+#: templates/account/account_deleted.html:5
+msgid "Account Deleted"
+msgstr "Аккаунт удален"
+
+#: templates/account/account_deleted.html:8
+msgid "Your Aqsa account, including all your data, was deleted."
+msgstr "Ваш Aqsa-аккаунт, включая все данные, были удалены."
+
+#: templates/common/if_form.errors.html:7
+#: templates/transaction/if_formset.errors.html:7
+msgid "Please, correct the <b>following</b>:"
+msgstr "Пожалуй, исправьте <b>следующее</b>:"
+
+#: templates/common/list.html:16
+msgid "Actions"
+msgstr "Действия"
+
+#: templates/common/list.html:29
+msgid "Check File (and import...)"
+msgstr "Проверить файл и импортировать..."
+
+#: templates/common/list.html:32
+msgid "View report"
+msgstr "Смотреть отчет"
+
+#: templates/common/list.html:35
+msgid "Copy"
+msgstr "Копировать"
+
+#: templates/common/list.html:37
+msgid "Edit"
+msgstr "Редактировать"
+
+#: templates/common/list.html:38
+msgid "Delete"
+msgstr "Удалить"
+
+#: templates/common/list.html:102
+msgid "* That indicator is relevant only for transactions."
+msgstr "* Этот показатель актуален только для транзакций."
+
+#: templates/common/pagination.html:9
+msgid "Previous"
+msgstr "Назад"
+
+#: templates/common/pagination.html:26
+msgid "Page #"
+msgstr "Страница №"
+
+#: templates/common/pagination.html:29
+#: templates/transaction/paginate_by_form.html:11
+msgid "Go"
+msgstr "Пошел"
+
+#: templates/common/pagination.html:36
+msgid "Next"
+msgstr "Вперед"
+
+#: templates/dashboard/dashboard.html:8
+msgid "Balance of Every Wallet"
+msgstr "Баланс каждого кошелька"
+
+#: templates/dashboard/dashboard.html:14
+msgid "Balance"
+msgstr "Баланс"
+
+#: templates/dashboard/dashboard.html:14
+msgid "No Transactions"
+msgstr "Нет транзакций"
+
+#: templates/dashboard/dashboard.html:19
+msgid ""
+"After you will create a wallets, you can see here balance of every your "
+"wallet."
+msgstr ""
+"После создания кошелька, здесь Вы сможете видеть баланс каждого из Ваших "
+"кошельков."
+
+#: templates/dashboard/dashboard.html:26
+msgid "Totals By Wallet"
+msgstr "Итоги по кошельку"
+
+#: templates/dashboard/dashboard.html:33 templates/dashboard/dashboard.html:57
+msgid "Income"
+msgstr "Доход"
+
+#: templates/dashboard/dashboard.html:33 templates/dashboard/dashboard.html:57
+msgid "No Income"
+msgstr "Нет доходов"
+
+#: templates/dashboard/dashboard.html:34 templates/dashboard/dashboard.html:58
+msgid "Expense"
+msgstr "Расход"
+
+#: templates/dashboard/dashboard.html:34 templates/dashboard/dashboard.html:58
+msgid "No Expense"
+msgstr "Нет расходов"
+
+#: templates/dashboard/dashboard.html:41
+msgid ""
+"After you will create a wallet and transaction, you can see here total "
+"income and total expense of every wallet."
+msgstr ""
+"После создания кошелька и добавления транзакции, здесь Вы сможете видеть "
+"сумму доходов и сумму расходов по каждому кошельку."
+
+#: templates/dashboard/dashboard.html:42 templates/dashboard/dashboard.html:66
+msgid "Transactions, marked as ignored, will be not included to the total."
+msgstr ""
+"Транзакции, отмеченные как игнорирующиеся, не будут включены в итоговые "
+"показатели."
+
+#: templates/dashboard/dashboard.html:50
+msgid "Totals By Currency"
+msgstr "Итоги по валюте"
+
+#: templates/dashboard/dashboard.html:65
+msgid ""
+"After you add a transactions, you can see here total income and total "
+"expense in every currency."
+msgstr ""
+"После создания кошелька и добавления транзакции, здесь Вы сможете видеть "
+"сумму доходов и сумму расходов по каждому кошельку."
+
+#: templates/export_to_file/home.html:8
+msgid ""
+"\n"
+"\t\t\tOn this page you can export your data to CSV file.<br>\n"
+"\t\t\tResulting file you can easily import to spreadsheet software,<br>\n"
+"\t\t\tlike LibreOffice Calc, WPS Spreadsheets, MS Excel or another (check "
+"documentation of the software how to do that).<br>\n"
+"\t\t\tList of your transactions will contain names of your wallets, "
+"contacts, etc.\n"
+"\t\t"
+msgstr ""
+"\n"
+"\t\t\tНа этой странице Вы можете экспортировать Ваши данные в CSV файл.<br>\n"
+"\t\t\tПолученный файл Вы сможете легко импортировать в программу электронных "
+"таблиц,<br>\n"
+"\t\t\tнапример, LibreOffice Calc, WPS Spreadsheets, MS Excel или другую "
+"(проверьте документацию по используемому ПО как сделать это).<br>\n"
+"\t\t\tСписок Ваших транзакций будет содержать названия Ваших кошельков, "
+"контактов и прочего.\n"
+"\t\t"
+
+#: templates/export_to_file/home.html:16
+msgid ""
+"\n"
+"\t\t\tIf you want to get a back up file which will contain your categories, "
+"tags, wallets, contacts and transactions,<br>\n"
+"\t\t\tdownload your data in one ZIP-file. Resulting file you can easily "
+"import to another Aqsa account.\n"
+"\t\t"
+msgstr ""
+"\n"
+"\t\t\tЕсли Вы хотите получить бэкап файл, который будет содержать Ваши "
+"категории, теги, кошельки, контакты и транзакции,<br>\n"
+"\t\t\tскачивайте Ваши данные в одном ZIP-архиве. Полученный файл Вы сможете "
+"легко импортировать в другой Aqsa-аккаунт.\n"
+"\t\t"
+
+#: templates/export_to_file/home.html:22
+msgid ""
+"\n"
+"\t\t\tNote: do not import your back up file or the list of transactions to "
+"this account, unless every your transaction will be duplicated.\n"
+"\t\t"
+msgstr ""
+"\n"
+"\t\t\tПримечание: не импортируйте бэкап файл или список транзакций в этот "
+"аккаунт, иначе Ваши транзакции задвоятся.\n"
+"\t\t"
+
+#: templates/export_to_file/home.html:28
+msgid "Download all of below in one ZIP-file"
+msgstr "Скачать все из перечисленного ниже в одном ZIP-файле"
+
+#: templates/export_to_file/home.html:30
+msgid "Download list of my categories in CSV"
+msgstr "Скачать список моих категорий в CSV"
+
+#: templates/export_to_file/home.html:32
+msgid "Download list of my tags in CSV"
+msgstr "Скачать список моих тегов в CSV"
+
+#: templates/export_to_file/home.html:34
+msgid "Download list of my wallets in CSV"
+msgstr "Скачать список моих кошельков в CSV"
+
+#: templates/export_to_file/home.html:36
+msgid "Download list of my contacts in CSV"
+msgstr "Скачать список моих контактов в CSV"
+
+#: templates/export_to_file/home.html:38
+msgid "Download list of my transactions in CSV"
+msgstr "Скачать список моих транзакций в CSV"
+
+#: templates/import_from_file/check_file_show_error_or_ok.html:9
+msgid "Your file is OK."
+msgstr "Ваш файл в порядке"
+
+#: templates/import_from_file/check_file_show_error_or_ok.html:11
+msgid ""
+"\n"
+"\t\t\t\t\t\tGo to the next step for import transaction and wait while "
+"transactions from your file will be imported completely.<br>\n"
+"\t\t\t\t\t\tAfter click, don not leave this page and wait while data from "
+"your file will be imported completely (you will see a success message).<br>\n"
+"\t\t\t\t\t\tNote: if will happens some error, you can continue to import "
+"data from this file later and data will be not duplicated.\n"
+"\t\t\t\t\t"
+msgstr ""
+"\n"
+"\t\t\t\t\t\tПереходите к следующему шагу для импорта транзакций и ждите пока "
+"транзакции из вашего файла будут успешно импортированы.<br>\n"
+"\t\t\t\t\t\tПосле нажатия кнопки, не покидайте эту страницу и ждите пока "
+"данные из вашего файла будут успешно импортированы (Вы увидите сообщение об "
+"успешном окончании).<br>\n"
+"\t\t\t\t\t\tЗаметка: если случится какая-либо ошибка, Вы сможете продолжить "
+"импортировать данные из Вашего файла и эти данные не задвоятся.\n"
+"\t\t\t\t\t"
+
+#: templates/import_from_file/check_file_show_error_or_ok.html:27
+msgid "Your file contains an error."
+msgstr "Ваш файл содержит ошибку(и)"
+
+#: templates/import_from_file/check_file_show_error_or_ok.html:29
+msgid ""
+"\n"
+"\t\t\t\t\t\tBelow you can see which field contains a wrong value (<span "
+"class=\"text-danger\">red</span>)\n"
+"\t\t\t\t\t\tand which field is OK (<span class=\"text-success\">green</"
+"span>).\n"
+"\t\t\t\t\t"
+msgstr ""
+"\n"
+"\t\t\t\t\t\tНиже Вы можете увидеть какое поле содержит ошибку (<span class="
+"\"text-danger\">red</span>)\n"
+"\t\t\t\t\t\tи какое ОК (<span class=\"text-success\">green</span>).\n"
+"\t\t\t\t\t"
+
+#: templates/registration/include_login_register.html:10
+msgid "Sign in"
+msgstr "Войти"
+
+#: templates/registration/include_login_register.html:20
+msgid "Your username:"
+msgstr "Ваш логин:"
+
+#: templates/registration/include_login_register.html:26
+msgid "Your password:"
+msgstr "Ваш пароль:"
+
+#: templates/registration/include_login_register.html:32
+#: templates/registration/login.html:40
+msgid "Not a member?"
+msgstr "Нет аккаунта?"
+
+#: templates/registration/include_login_register.html:32
+#: templates/registration/login.html:40 templates/registration/signup.html:5
+#: templates/registration/signup.html:7 templates/registration/signup.html:31
+msgid "Sign Up"
+msgstr "Регистрация"
+
+#: templates/registration/include_login_register.html:33
+msgid "Forgot"
+msgstr "Забыли"
+
+#: templates/registration/include_login_register.html:33
+msgid "Password"
+msgstr "Пароль"
+
+#: templates/registration/logged_out.html:5
+#: templates/registration/logged_out.html:7
+#: templates/registration/logged_out.html:10
+msgid "Logged out!"
+msgstr "Вы вышли из Aqsa"
+
+#: templates/registration/logged_out.html:11
+msgid "Click here to login again."
+msgstr "Нажмите здесь чтобы снова войти"
+
+#: templates/registration/login.html:11
+msgid "Your username and password did not match. Please try again."
+msgstr "Логин и/или пароль не правильны. Попробуйте снова."
+
+#: templates/registration/login.html:39
+msgid "Lost password?"
+msgstr "Потеряли пароль?"
+
+#: templates/registration/password_reset_complete.html:5
+#: templates/registration/password_reset_complete.html:7
+msgid "Password Reset Complete"
+msgstr "Пароль был сброшен"
+
+#: templates/registration/password_reset_complete.html:10
+msgid "The password has been changed!"
+msgstr "Пароль был изменен!"
+
+#: templates/registration/password_reset_complete.html:11
+msgid "Log In Again?"
+msgstr "Войти снова?"
+
+#: templates/registration/password_reset_confirm.html:5
+#: templates/registration/password_reset_confirm.html:7
+msgid "Password Reset Confirm"
+msgstr "Подтвердите сброс пароля"
+
+#: templates/registration/password_reset_confirm.html:11
+msgid "Please enter (and confirm) your new password."
+msgstr "Пожалуйста, введите (и подтвердите) Ваш новый пароль"
+
+#: templates/registration/password_reset_confirm.html:37
+msgid "Change my password"
+msgstr "Изменить мой пароль"
+
+#: templates/registration/password_reset_confirm.html:41
+msgid "Password reset failed"
+msgstr "Не удалось сбросить пароль"
+
+#: templates/registration/password_reset_confirm.html:42
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used. Please request a new password reset."
+msgstr ""
+"Ссылка для обновления пароля устарела, вероятно, по ней уже был переход. "
+"Сделайте новый запрос на сброс пароля"
+
+#: templates/registration/password_reset_done.html:5
+#: templates/registration/password_reset_done.html:7
+msgid "Password Reset Done"
+msgstr "Пароль был сброшен"
+
+#: templates/registration/password_reset_done.html:10
+msgid ""
+"We've emailed you instructions for setting your password. If they have not "
+"arrived in a few minutes, check your spam folder."
+msgstr ""
+"Мы отправили инструкции для сброса пароля. Если они не придут в течении "
+"нескольких минут, проверьте папку со спамом"
+
+#: templates/registration/password_reset_email.html:1
+#, python-format
+msgid ""
+"Someone asked for password reset for email %(email)s. Follow the link below:"
+msgstr ""
+"Кто-то сделал запрос на сброс пароля для аккаунта %(email)s. Перейдите по "
+"ссылке ниже:"
+
+#: templates/registration/password_reset_form.html:5
+#: templates/registration/password_reset_form.html:7
+#: templates/registration/password_reset_form.html:23
+msgid "Reset Password"
+msgstr "Сбросить пароль"
+
+#: templates/report/read.html:11
+msgid "Parameters of the report"
+msgstr "Параметры отчета"
+
+#: templates/report/read.html:28
+msgid "Balance by Value in currency"
+msgstr "Баланс по Значению в валюте"
+
+#: templates/report/read.html:43
+msgid "Balance of transactions without category"
+msgstr "Баланс транзакций без категории"
+
+#: templates/report/read.html:45
+msgid "Deleted Category"
+msgstr "Удаленная категория"
+
+#: templates/report/read.html:52
+msgid "No Transactions in this Category"
+msgstr "Нет транзакций в этой категории"
+
+#: templates/report/read.html:60
+msgid "Total Balance (Sum of above)"
+msgstr "Итоговый баланс (сумма перечисленного выше)"
+
+#: templates/transaction/comfortable_or_compact_btn.html:6
+msgid "Comfortable View of the Table"
+msgstr "Комфортный вид таблицы"
+
+#: templates/transaction/comfortable_or_compact_btn.html:10
+msgid "Compact View of the Table"
+msgstr "Компактный вид таблицы"
+
+#: templates/transaction/filter_form.html:15
+msgid "All"
+msgstr "Все"
+
+#: templates/transaction/filter_form.html:16
+msgid "Show only transfer transactions"
+msgstr "Показать только транзакции перемещения денег"
+
+#: templates/transaction/filter_form.html:17
+msgid "Exclude transfer transactions"
+msgstr "Исключить транзакции перемещения денег"
+
+#: templates/transaction/filter_form.html:81
+msgid "Apply Filters and Find Transactions"
+msgstr "Применить фильтры и найти транзакции"
+
+#: templates/transaction/if_formset.errors.html:10
+msgid "In row"
+msgstr "В строке"
+
+#: templates/transaction/new_set.html:56
+msgid "Save all transactions"
+msgstr "Сохранить все транзакции"
+
+#: templates/transaction/new_set.html:62
+#: templates/transaction/paginate_by_form.html:7
+#: templates/transaction/paginate_by_form.html:8
+#: templates/transaction/paginate_by_form.html:9
+msgid "Show me"
+msgstr "Показать мне"
+
+#: templates/transaction/new_set.html:62
+#: templates/transaction/paginate_by_form.html:7
+#: templates/transaction/paginate_by_form.html:8
+#: templates/transaction/paginate_by_form.html:9
+msgid "row(s)"
+msgstr "строк"
