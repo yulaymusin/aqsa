@@ -6,4 +6,5 @@ media/
 aqsa_apps/email_host_etc.py
 aqsa_apps/databases.py
 *.mo
-
+email-debug/
+DOCUMENTS_OF_PROJECT/
