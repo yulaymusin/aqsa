@@ -3,9 +3,6 @@ from django.conf.urls import url
 
 from . import views_list_upload as vlu
 
-from .banks import rub_sberbank as rs
-# from .banks import usd_bank as ub
-
 from . import views_check_csv_backup as vccb
 from . import views_db_records_csv_backup as vdrcb
 
@@ -20,11 +17,6 @@ urlpatterns = [
 
 
 # <BANK STATEMENT
-# rub_sberbank - Sberbank (Card in Russian Federation ruble currency).
-urlpatterns += [
-    url(r'^rub_sberbank_check/(?P<pk>\d+)$', rs.rub_sberbank_check, name='rub_sberbank_check'),
-    url(r'^rub_sberbank_db_records/(?P<pk>\d+)$', rs.rub_sberbank_db_records, name='rub_sberbank_db_records'),  # check file and show errors if any error
-]
 # # usd_bank - Another Bank (Card in United States dollar currency).
 # import_from_file_urlpatterns += [
 #     url(r'^usd_bank_check/(?P<pk>\d+)$', ub.usd_bank_check, name='usd_bank_check'),

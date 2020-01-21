@@ -27,9 +27,6 @@ class ImportFromFile(models.Model):
     )
 
     available_banks = (
-        # bank statement of main bank of the RF (Russian Federation)
-        ('rub_sberbank', _('Sberbank (Card in Russian Federation ruble currency)')),
-        # TO DO: ('usd_bank', _('Another Bank (Card in United States dollar currency)')),
     )
 
     owner = models.ForeignKey(User, models.CASCADE)
