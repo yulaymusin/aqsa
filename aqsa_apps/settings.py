@@ -1,13 +1,9 @@
-# Django 1.11
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'e-o)vvj1mi*&889h)7hq!psw1#dfa*ikfa*$0$k!ia5qc&poo%'
 DEBUG = True
 
-if DEBUG:
-    ALLOWED_HOSTS = ['aqsa.local']
-else:
-    ALLOWED_HOSTS = ['theaqsa.com']
+ALLOWED_HOSTS = ['*'] if DEBUG else ['theaqsa.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
