@@ -159,6 +159,9 @@ def csv_checker_of_transaction(
                 row_data_dict['for_check_csv'] = True
                 row_data_dict['wallet_curr'] = names_and_currencies_of_wallets[csv_row[5]]
             except IndexError:
+                row_data_dict = csv_row_for_transaction_form(csv_row)
+                row_data_dict['for_check_csv'] = True
+                row_data_dict['wallet_curr'] = names_and_currencies_of_wallets[csv_row[5]]
                 no_error = False
                 break
 
@@ -192,7 +195,7 @@ def csv_checker_of_transaction(
             if fcd.get('wallet').name not in names_and_currencies_of_wallets:
                 no_error = False
                 break
-            if fcd.get('category') and fcd.get['category'] not in names_of_categories:
+            if fcd.get('category') and fcd.get('category') not in names_of_categories:
                 no_error = False
                 break
             if fcd.get('tag'):

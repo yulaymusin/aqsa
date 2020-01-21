@@ -74,9 +74,12 @@ class DeleteViewWithProtectedErrOrSuccessMsgAndObjectsContext(ContextForGenericV
             messages.success(self.request, self.success_message)
             return HttpResponseRedirect(success_url)
         except ProtectedError:
-            context = self.get_context_data(object=self.object)
-            messages.error(self.request, self.protected_error_msg)
-            return self.render_to_response(context)
+            return self.except_protected_error()
+
+    def except_protected_error(self):
+        context = self.get_context_data(object=self.object, except_protected_error=True)
+        messages.error(self.request, self.protected_error_msg)
+        return self.render_to_response(context)
 
 
 class SuccessUrl2ForCreateView:

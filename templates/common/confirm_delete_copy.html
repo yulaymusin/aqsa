@@ -59,6 +59,13 @@
 
 	<form method="POST">
 		{% csrf_token %}
+		{% if except_protected_error %}
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" name="delete_anyway"> {{ delete_anyway }}
+				</label>
+			</div>
+		{% endif %}
 		<button type="submit" class="btn btn-warning">{{ submit_btn }}</button>
 	</form>
 

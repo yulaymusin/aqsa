@@ -2,7 +2,12 @@
 from . import viewxins_mixins as vxmx
 from . import models as m
 from django.utils.translation import ugettext_lazy as _
-from django.core.urlresolvers import reverse_lazy
+from django.urls import reverse_lazy
+
+from django.db.transaction import atomic as db_transaction_atomic
+from aqsa_apps.transaction import models as ta_m
+from django.contrib import messages
+from django.http import HttpResponseRedirect
 
 
 class List(vxmx.List):
@@ -48,4 +53,21 @@ class Delete(vxmx.Delete):
         'description': _('Are you sure you want to delete the contact shown below?'),
         'labels': [m.Contact._meta.get_field(label).verbose_name for label in List.model_labels_and_fields],
         'fields': List.model_labels_and_fields,
+
+        'delete_anyway': _('Unlink all transactions from this contact and delete this contact.'),
     }
+
+    def except_protected_error(self):
+        if self.request.POST.get('delete_anyway'):
+            self.object = self.get_object()
+            success_url = self.get_success_url()
+
+            with db_transaction_atomic():
+                ta_m.Transaction.objects.filter(owner=self.request.user, contact=self.object).update(contact=None)
+                self.object.delete()
+
+            messages.success(self.request, self.success_message)
+            return HttpResponseRedirect(success_url)
+        messages.info(self.request, _('Use checkbox below for delete this contact and unlink all transactions from '
+                                      'this contact.'))
+        return super().except_protected_error()
