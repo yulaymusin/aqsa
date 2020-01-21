@@ -2,7 +2,7 @@
 from . import viewxins_mixins as vxmx
 from . import models as m
 from django.utils.translation import ugettext_lazy as _
-from django.core.urlresolvers import reverse_lazy
+from django.urls import reverse_lazy
 
 
 class List(vxmx.List):

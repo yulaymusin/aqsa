@@ -4,7 +4,7 @@ from django.utils.translation import ugettext_lazy as _
 from django.contrib.auth.models import User
 from aqsa_apps.wallet_tag_etc import models as wte_m
 from aqsa_apps.wallet_tag_etc import currencies
-from django.core.urlresolvers import reverse_lazy
+from django.urls import reverse_lazy
 
 
 class Report(models.Model):

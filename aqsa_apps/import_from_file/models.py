@@ -4,7 +4,7 @@ from django.utils.translation import ugettext_lazy as _
 from django.contrib.auth.models import User
 from . import validators as v
 from aqsa_apps.wallet_tag_etc import models as wallet_tag_etc_m
-from django.core.urlresolvers import reverse_lazy
+from django.urls import reverse_lazy
 
 
 def upload_to(instance, filename):
@@ -43,7 +43,7 @@ class ImportFromFile(models.Model):
         default=0, verbose_name=_('* Number of imported rows'))
     success = models.BooleanField(default=False, verbose_name=_('Import finished successfully'))
 
-    wallet = models.ForeignKey(wallet_tag_etc_m.Wallet, null=True, verbose_name=_('Wallet'))
+    wallet = models.ForeignKey(wallet_tag_etc_m.Wallet, on_delete=models.CASCADE, null=True, verbose_name=_('Wallet'))
     bank = models.CharField(max_length=20, choices=available_banks, null=True, verbose_name=_('Bank'))
 
     variety = models.PositiveSmallIntegerField(choices=varieties, verbose_name=_('Variety of uploaded file'))

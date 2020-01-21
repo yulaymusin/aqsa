@@ -2,7 +2,8 @@
 from django.conf.urls import url
 from . import views as v
 
+app_name = 'dashboard'
 
-dashboard_urlpatterns = [
+urlpatterns = [
     url(r'^$', v.home, name='home'),
 ]

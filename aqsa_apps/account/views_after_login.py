@@ -12,7 +12,7 @@ from . import models as m
 from django.contrib.auth.mixins import LoginRequiredMixin
 from aqsa_apps import mixins as mix
 from django.views.generic.edit import FormView
-from django.core.urlresolvers import reverse_lazy
+from django.urls import reverse_lazy
 from aqsa_apps.about import models as ab_m
 from aqsa_apps.transaction import models as ta_m
 from django.views.generic import TemplateView

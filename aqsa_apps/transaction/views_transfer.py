@@ -4,7 +4,7 @@ from aqsa_apps import mixins as mix
 from django.views.generic.edit import FormView
 from . import forms as f
 from django.utils.translation import ugettext_lazy as _
-from django.core.urlresolvers import reverse_lazy
+from django.urls import reverse_lazy
 from . import models as m
 from django.db.transaction import atomic as db_transaction_atomic
 from django.contrib import messages

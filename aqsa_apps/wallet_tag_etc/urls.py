@@ -2,7 +2,9 @@
 from django.conf.urls import url
 from . import views_category as category, views_contact as contact, views_tag as tag, views_wallet as wallet
 
-wallet_tag_etc_urlpatterns = [
+app_name = 'wallet_tag_etc'
+
+urlpatterns = [
     url(r'^wallet/list$', wallet.List.as_view(), name='wallet_list'),
     url(r'^wallet/new$', wallet.Create.as_view(), name='wallet_new'),
     url(r'^wallet/edit/(?P<pk>\d+)$', wallet.Update.as_view(), name='wallet_edit'),

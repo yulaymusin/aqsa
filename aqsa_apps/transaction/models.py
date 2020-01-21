@@ -5,7 +5,7 @@ from django.utils.translation import ugettext_lazy as _
 from django.utils import timezone
 from aqsa_apps.wallet_tag_etc import models as wte_m
 from aqsa_apps.wallet_tag_etc import currencies
-from django.core.urlresolvers import reverse_lazy
+from django.urls import reverse_lazy
 
 
 class Transaction(models.Model):
@@ -22,7 +22,7 @@ class Transaction(models.Model):
     # Is money transfer.
     transfer = models.BooleanField(db_index=True, default=False, verbose_name=_('Transfer or Income or Expense'))
     # transfer_related not for show to user, transfer_related needs for update/delete transfer pair.
-    transfer_related = models.OneToOneField('self', null=True)
+    transfer_related = models.OneToOneField('self', on_delete=models.CASCADE, null=True)
 
     date = models.DateField(db_index=True, default=timezone.now, verbose_name=_('Date'))
 

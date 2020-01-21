@@ -2,8 +2,9 @@
 from django.conf.urls import url
 from . import views as v
 
+app_name = 'export_to_file'
 
-export_to_file_urlpatterns = [
+urlpatterns = [
     url(r'^home$', v.Home.as_view(), name='home'),
 
     url(r'^wallet_to_csv/(?P<filename>.*).csv', v.wallet_to_csv, name='wallet_to_csv'),

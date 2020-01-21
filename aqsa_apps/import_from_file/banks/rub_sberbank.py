@@ -13,7 +13,7 @@ from django.views.decorators.http import require_POST
 from aqsa_apps.transaction import models as ta_m
 from django.db.transaction import atomic as db_transaction_atomic
 from django.contrib import messages
-from django.core.urlresolvers import reverse_lazy
+from django.urls import reverse_lazy
 
 
 class RubSberbankForm(forms.Form):

@@ -4,7 +4,7 @@ from aqsa_apps import mixins as mix
 from django.views.generic.edit import CreateView, UpdateView
 from . import forms as f
 from . import models as m
-from django.core.urlresolvers import reverse_lazy
+from django.urls import reverse_lazy
 from django.utils.translation import ugettext_lazy as _
 
 from django.contrib.auth.decorators import login_required

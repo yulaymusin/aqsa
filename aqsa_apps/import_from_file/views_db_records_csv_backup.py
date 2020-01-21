@@ -9,7 +9,7 @@ from . import viewxins_record_csv_backup as vxrcb
 from . import forms as f
 from aqsa_apps.wallet_tag_etc import models as wte_m
 from django.contrib import messages
-from django.core.urlresolvers import reverse_lazy
+from django.urls import reverse_lazy
 
 import os
 from django.conf import settings
