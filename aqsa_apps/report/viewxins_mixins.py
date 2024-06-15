@@ -4,7 +4,7 @@ from aqsa_apps import sql_custom as sql
 from . import models as m
 from django.contrib.auth.mixins import LoginRequiredMixin
 from aqsa_apps import mixins as mix
-from django.utils.translation import ugettext as _
+from django.utils.translation import gettext as _
 from django.views.generic.edit import FormView
 from django.views.generic import DetailView
 

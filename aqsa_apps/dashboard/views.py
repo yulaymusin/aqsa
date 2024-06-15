@@ -5,7 +5,7 @@ from aqsa_apps import sql_custom as sql
 from aqsa_apps.transaction import models as ta_m
 from aqsa_apps.wallet_tag_etc import currencies
 from django.shortcuts import render
-from django.utils.translation import ugettext as _
+from django.utils.translation import gettext as _
 
 
 @login_required

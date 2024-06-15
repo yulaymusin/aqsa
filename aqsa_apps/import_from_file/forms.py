@@ -2,7 +2,7 @@
 from aqsa_apps import mixins as mix
 from django import forms
 from aqsa_apps.import_from_file import models as m
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from aqsa_apps.wallet_tag_etc import validators as wte_v
 from . import validators as v

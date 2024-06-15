@@ -1,5 +1,5 @@
 {% if datetimepicker and not 'mobile' in request.META.HTTP_USER_AGENT|lower %}
-	{% load static from staticfiles %}
+	{% load static %}
 	{% load user_locale %}
 	
 	<link href="{% static '_base/jquery.datetimepicker.min.css' %}" rel="stylesheet">

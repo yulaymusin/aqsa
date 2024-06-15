@@ -1,6 +1,6 @@
 # Author of Aqsa: Yulay Musin
 from django.core.exceptions import ValidationError
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 
 IMPORT_FILE_MAX_SIZE = ('1000 Kb', 1000 * 1024)

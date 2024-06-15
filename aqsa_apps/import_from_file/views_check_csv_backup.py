@@ -5,7 +5,7 @@ from . import models as m
 from . import viewxins_check_csv_backup as vxccb
 from . import forms as f
 from django.shortcuts import render
-from django.utils.translation import ugettext as _
+from django.utils.translation import gettext as _
 import os
 from django.conf import settings
 from aqsa_apps.wallet_tag_etc import models as wte_m

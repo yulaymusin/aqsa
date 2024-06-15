@@ -1,6 +1,6 @@
 # Author of Aqsa: Yulay Musin
 from django.db import models
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 from django.contrib.auth.models import User
 from . import validators as v
 from aqsa_apps.wallet_tag_etc import models as wallet_tag_etc_m
@@ -35,7 +35,7 @@ class ImportFromFile(models.Model):
         upload_to=upload_to, validators=[v.file_size, v.file_extension], verbose_name=_('File'))
 
     checked = models.BooleanField(default=False, verbose_name=_('Checked'))
-    no_error = models.NullBooleanField(verbose_name=_('No error'))
+    no_error = models.BooleanField(null=True, verbose_name=_('No error'))
     num_imported_rows = models.PositiveSmallIntegerField(
         default=0, verbose_name=_('* Number of imported rows'))
     success = models.BooleanField(default=False, verbose_name=_('Import finished successfully'))

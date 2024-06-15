@@ -3,7 +3,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from aqsa_apps import mixins as mix
 from django.views.generic.edit import FormView
 from . import forms as f
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 from django.urls import reverse_lazy
 from . import models as m
 from django.db.transaction import atomic as db_transaction_atomic

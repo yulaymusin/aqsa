@@ -1,7 +1,7 @@
 # Author of Aqsa: Yulay Musin
 from django.contrib.auth.forms import UserCreationForm
 from django import forms
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 from django.contrib.auth.models import User
 from . import models as m
 from aqsa_apps import mixins as mix

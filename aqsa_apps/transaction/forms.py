@@ -2,7 +2,7 @@
 from aqsa_apps import mixins as mix
 from django import forms
 from . import models as m
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 from . import formxins as fx
 from django.utils import timezone
 from aqsa_apps.wallet_tag_etc import models as wte_m

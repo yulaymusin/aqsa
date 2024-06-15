@@ -2,7 +2,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from . import validators as v
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 from aqsa_apps.wallet_tag_etc import currencies
 from django.urls import reverse_lazy
 

@@ -1,9 +1,9 @@
 # Author of Aqsa: Yulay Musin
-from django.conf.urls import url
+from django.urls import re_path
 from . import views as v
 
 app_name = 'dashboard'
 
 urlpatterns = [
-    url(r'^$', v.home, name='home'),
+    re_path(r'^$', v.home, name='home'),
 ]

@@ -1,7 +1,7 @@
 # Author of Aqsa: Yulay Musin
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import TemplateView
-from django.utils.translation import ugettext as _
+from django.utils.translation import gettext as _
 from django.contrib.auth.decorators import login_required
 from . import viewxins as vx
 from aqsa_apps.wallet_tag_etc import models as wte_m
